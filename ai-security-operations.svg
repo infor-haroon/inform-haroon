@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" width="1200" height="650">
+  <defs>
+    <linearGradient id="aiBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0b1a"/>
+      <stop offset="100%" style="stop-color:#1a1035"/>
+    </linearGradient>
+    <linearGradient id="aiPurple" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#6d28d9"/>
+    </linearGradient>
+    <linearGradient id="aiBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="aiCyan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#22d3ee"/>
+      <stop offset="100%" style="stop-color:#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="aiGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#34d399"/>
+      <stop offset="100%" style="stop-color:#10b981"/>
+    </linearGradient>
+    <linearGradient id="aiRed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f87171"/>
+      <stop offset="100%" style="stop-color:#ef4444"/>
+    </linearGradient>
+    <linearGradient id="aiPink" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899"/>
+      <stop offset="100%" style="stop-color:#db2777"/>
+    </linearGradient>
+    <linearGradient id="aiOrange" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fb923c"/>
+      <stop offset="100%" style="stop-color:#f97316"/>
+    </linearGradient>
+    <linearGradient id="neuralGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6" stop-opacity="0.2"/>
+      <stop offset="50%" style="stop-color:#6366f1" stop-opacity="0.1"/>
+      <stop offset="100%" style="stop-color:#22d3ee" stop-opacity="0.2"/>
+    </linearGradient>
+    <filter id="aiShadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="neuralGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="aiArrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7 L2,3.5 Z" fill="#8b5cf6"/>
+    </marker>
+    <marker id="aiArrowCyan" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7 L2,3.5 Z" fill="#22d3ee"/>
+    </marker>
+    <marker id="aiArrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7 L2,3.5 Z" fill="#34d399"/>
+    </marker>
+    <marker id="aiArrowPink" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7 L2,3.5 Z" fill="#ec4899"/>
+    </marker>
+    <pattern id="aiGrid" width="25" height="25" patternUnits="userSpaceOnUse">
+      <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#1e1b3a" stroke-width="0.4" opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="650" fill="url(#aiBg)" rx="12"/>
+  <rect width="1200" height="650" fill="url(#aiGrid)" rx="12"/>
+  <!-- Subtle neural network background -->
+  <rect x="400" y="200" width="400" height="300" fill="url(#neuralGrad)" rx="20" opacity="0.5"/>
+  <rect x="1" y="1" width="1198" height="648" fill="none" stroke="#312e81" stroke-width="2" rx="12"/>
+
+  <!-- Title Bar -->
+  <rect x="0" y="0" width="1200" height="50" fill="#0d0b1a" rx="12" ry="12"/>
+  <rect x="0" y="28" width="1200" height="22" fill="#0d0b1a"/>
+  <line x1="0" y1="50" x2="1200" y2="50" stroke="#312e81" stroke-width="1.5"/>
+  <circle cx="24" cy="25" r="7" fill="#ef4444"/>
+  <circle cx="46" cy="25" r="7" fill="#f59e0b"/>
+  <circle cx="68" cy="25" r="7" fill="#10b981"/>
+  <text x="600" y="32" font-family="'Courier New', monospace" font-size="14" fill="#c4b5fd" text-anchor="middle" font-weight="bold">🧠 AI/ML Security Operations — Intelligent Threat Detection &amp; Response</text>
+
+  <!-- ===== ROW 1: Main ML Pipeline Flow ===== -->
+
+  <!-- Stage 1: Data Collection -->
+  <g filter="url(#aiShadow)">
+    <rect x="20" y="70" width="148" height="100" rx="10" fill="#0d0b1a" stroke="#8b5cf6" stroke-width="1.5"/>
+    <rect x="20" y="70" width="148" height="26" rx="10" ry="10" fill="url(#aiPurple)"/>
+    <rect x="20" y="86" width="148" height="10" fill="url(#aiPurple)"/>
+    <text x="94" y="88" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">📥 Data Collection</text>
+    <text x="32" y="110" font-family="'Courier New', monospace" font-size="7" fill="#a78bfa">• SIEM logs (Splunk)</text>
+    <text x="32" y="122" font-family="'Courier New', monospace" font-size="7" fill="#a78bfa">• Network telemetry</text>
+    <text x="32" y="134" font-family="'Courier New', monospace" font-size="7" fill="#a78bfa">• Endpoint events</text>
+    <text x="32" y="146" font-family="'Courier New', monospace" font-size="7" fill="#a78bfa">• Threat intelligence</text>
+    <text x="32" y="158" font-family="'Courier New', monospace" font-size="7" fill="#a78bfa">• Cloud audit trails</text>
+    <!-- Pulse icon -->
+    <polyline points="120,145 130,145 135,130 140,160 145,135 150,145 158,145" fill="none" stroke="#8b5cf6" stroke-width="1.5" opacity="0.6"/>
+  </g>
+
+  <!-- Arrow 1→2 -->
+  <line x1="168" y1="120" x2="188" y2="120" stroke="#8b5cf6" stroke-width="2" marker-end="url(#aiArrow)"/>
+
+  <!-- Stage 2: Feature Engineering -->
+  <g filter="url(#aiShadow)">
+    <rect x="192" y="70" width="148" height="100" rx="10" fill="#0d0b1a" stroke="#6366f1" stroke-width="1.5"/>
+    <rect x="192" y="70" width="148" height="26" rx="10" ry="10" fill="url(#aiBlue)"/>
+    <rect x="192" y="86" width="148" height="10" fill="url(#aiBlue)"/>
+    <text x="266" y="88" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">⚙️ Feature Engineering</text>
+    <text x="204" y="110" font-family="'Courier New', monospace" font-size="7" fill="#818cf8">• TF-IDF vectors</text>
+    <text x="204" y="122" font-family="'Courier New', monospace" font-size="7" fill="#818cf8">• Behavioral features</text>
+    <text x="204" y="134" font-family="'Courier New', monospace" font-size="7" fill="#818cf8">• Network embeddings</text>
+    <text x="204" y="146" font-family="'Courier New', monospace" font-size="7" fill="#818cf8">• Temporal patterns</text>
+    <text x="204" y="158" font-family="'Courier New', monospace" font-size="7" fill="#818cf8">• PCA reduction</text>
+  </g>
+
+  <!-- Arrow 2→3 -->
+  <line x1="340" y1="120" x2="360" y2="120" stroke="#6366f1" stroke-width="2" marker-end="url(#aiArrow)"/>
+
+  <!-- Stage 3: ML Model Training -->
+  <g filter="url(#aiShadow)">
+    <rect x="364" y="70" width="148" height="100" rx="10" fill="#0d0b1a" stroke="#22d3ee" stroke-width="1.5"/>
+    <rect x="364" y="70" width="148" height="26" rx="10" ry="10" fill="url(#aiCyan)"/>
+    <rect x="364" y="86" width="148" height="10" fill="url(#aiCyan)"/>
+    <text x="438" y="88" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">🧠 Model Training</text>
+    <text x="376" y="110" font-family="'Courier New', monospace" font-size="7" fill="#67e8f9">• TensorFlow 2.x</text>
+    <text x="376" y="122" font-family="'Courier New', monospace" font-size="7" fill="#67e8f9">• PyTorch Lightning</text>
+    <text x="376" y="134" font-family="'Courier New', monospace" font-size="7" fill="#67e8f9">• Scikit-learn</text>
+    <text x="376" y="146" font-family="'Courier New', monospace" font-size="7" fill="#67e8f9">• XGBoost / LGBM</text>
+    <text x="376" y="158" font-family="'Courier New', monospace" font-size="7" fill="#67e8f9">• GPU: A100 cluster</text>
+    <!-- Training bar -->
+    <rect x="480" y="145" width="20" height="14" rx="2" fill="#1e1b3a"/>
+    <rect x="480" y="145" width="14" height="14" rx="2" fill="#22d3ee" opacity="0.6"/>
+  </g>
+
+  <!-- Arrow 3→4 -->
+  <line x1="512" y1="120" x2="532" y2="120" stroke="#22d3ee" stroke-width="2" marker-end="url(#aiArrowCyan)"/>
+
+  <!-- Stage 4: Model Validation -->
+  <g filter="url(#aiShadow)">
+    <rect x="536" y="70" width="148" height="100" rx="10" fill="#0d0b1a" stroke="#34d399" stroke-width="1.5"/>
+    <rect x="536" y="70" width="148" height="26" rx="10" ry="10" fill="url(#aiGreen)"/>
+    <rect x="536" y="86" width="148" height="10" fill="url(#aiGreen)"/>
+    <text x="610" y="88" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">✅ Model Validation</text>
+    <text x="548" y="110" font-family="'Courier New', monospace" font-size="7" fill="#6ee7b7">• Accuracy: 98.7%</text>
+    <text x="548" y="122" font-family="'Courier New', monospace" font-size="7" fill="#6ee7b7">• Precision: 97.2%</text>
+    <text x="548" y="134" font-family="'Courier New', monospace" font-size="7" fill="#6ee7b7">• Recall: 99.1%</text>
+    <text x="548" y="146" font-family="'Courier New', monospace" font-size="7" fill="#6ee7b7">• F1-Score: 0.981</text>
+    <text x="548" y="158" font-family="'Courier New', monospace" font-size="7" fill="#6ee7b7">• AUC-ROC: 0.997</text>
+  </g>
+
+  <!-- Arrow 4→5 -->
+  <line x1="684" y1="120" x2="704" y2="120" stroke="#34d399" stroke-width="2" marker-end="url(#aiArrowGreen)"/>
+
+  <!-- Stage 5: Threat Detection -->
+  <g filter="url(#aiShadow)">
+    <rect x="708" y="70" width="148" height="100" rx="10" fill="#0d0b1a" stroke="#f87171" stroke-width="1.5"/>
+    <rect x="708" y="70" width="148" height="26" rx="10" ry="10" fill="url(#aiRed)"/>
+    <rect x="708" y="86" width="148" height="10" fill="url(#aiRed)"/>
+    <text x="782" y="88" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">🚨 Threat Detection</text>
+    <text x="720" y="110" font-family="'Courier New', monospace" font-size="7" fill="#fca5a5">• Malware detection</text>
+    <text x="720" y="122" font-family="'Courier New', monospace" font-size="7" fill="#fca5a5">• Anomaly detection</text>
+    <text x="720" y="134" font-family="'Courier New', monospace" font-size="7" fill="#fca5a5">• Phishing classification</text>
+    <text x="720" y="146" font-family="'Courier New', monospace" font-size="7" fill="#fca5a5">• Lateral movement</text>
+    <text x="720" y="158" font-family="'Courier New', monospace" font-size="7" fill="#fca5a5">• Insider threat ID</text>
+    <!-- Alert indicator -->
+    <circle cx="840" cy="82" r="5" fill="#f87171">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Arrow 5→6 -->
+  <line x1="856" y1="120" x2="876" y2="120" stroke="#f87171" stroke-width="2" marker-end="url(#aiArrow)"/>
+
+  <!-- Stage 6: Automated Response -->
+  <g filter="url(#aiShadow)">
+    <rect x="880" y="70" width="148" height="100" rx="10" fill="#0d0b1a" stroke="#ec4899" stroke-width="1.5"/>
+    <rect x="880" y="70" width="148" height="26" rx="10" ry="10" fill="url(#aiPink)"/>
+    <rect x="880" y="86" width="148" height="10" fill="url(#aiPink)"/>
+    <text x="954" y="88" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">🤖 Auto Response</text>
+    <text x="892" y="110" font-family="'Courier New', monospace" font-size="7" fill="#f9a8d4">• SOAR playbooks</text>
+    <text x="892" y="122" font-family="'Courier New', monospace" font-size="7" fill="#f9a8d4">• Auto-isolation</text>
+    <text x="892" y="134" font-family="'Courier New', monospace" font-size="7" fill="#f9a8d4">• IP blocking</text>
+    <text x="892" y="146" font-family="'Courier New', monospace" font-size="7" fill="#f9a8d4">• Ticket creation</text>
+    <text x="892" y="158" font-family="'Courier New', monospace" font-size="7" fill="#f9a8d4">• Escalation rules</text>
+  </g>
+
+  <!-- Arrow 6→7 -->
+  <line x1="1028" y1="120" x2="1048" y2="120" stroke="#ec4899" stroke-width="2" marker-end="url(#aiArrowPink)"/>
+
+  <!-- Stage 7: Feedback Loop -->
+  <g filter="url(#aiShadow)">
+    <rect x="1052" y="70" width="128" height="100" rx="10" fill="#0d0b1a" stroke="#fb923c" stroke-width="1.5"/>
+    <rect x="1052" y="70" width="128" height="26" rx="10" ry="10" fill="url(#aiOrange)"/>
+    <rect x="1052" y="86" width="128" height="10" fill="url(#aiOrange)"/>
+    <text x="1116" y="88" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">🔄 Feedback Loop</text>
+    <text x="1064" y="110" font-family="'Courier New', monospace" font-size="7" fill="#fdba74">• FP/FN analysis</text>
+    <text x="1064" y="122" font-family="'Courier New', monospace" font-size="7" fill="#fdba74">• Model retraining</text>
+    <text x="1064" y="134" font-family="'Courier New', monospace" font-size="7" fill="#fdba74">• Data drift detect</text>
+    <text x="1064" y="146" font-family="'Courier New', monospace" font-size="7" fill="#fdba74">• A/B testing</text>
+    <text x="1064" y="158" font-family="'Courier New', monospace" font-size="7" fill="#fdba74">• Version control</text>
+  </g>
+
+  <!-- Feedback Loop Arrow (curved back) -->
+  <path d="M1116,170 L1116,185 Q1116,195 1106,195 L100,195 Q90,195 90,185 L90,175" fill="none" stroke="#fb923c" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#aiArrow)"/>
+  <text x="600" y="192" font-family="'Courier New', monospace" font-size="7" fill="#fb923c" text-anchor="middle">Continuous Learning Pipeline — Retrain on new threat data</text>
+
+  <!-- ===== CENTER: Neural Network Visualization ===== -->
+  <g filter="url(#neuralGlow)">
+    <!-- Input Layer -->
+    <circle cx="340" cy="290" r="10" fill="none" stroke="#8b5cf6" stroke-width="1.5" opacity="0.7"/>
+    <circle cx="340" cy="320" r="10" fill="none" stroke="#8b5cf6" stroke-width="1.5" opacity="0.7"/>
+    <circle cx="340" cy="350" r="10" fill="none" stroke="#8b5cf6" stroke-width="1.5" opacity="0.7"/>
+    <circle cx="340" cy="380" r="10" fill="none" stroke="#8b5cf6" stroke-width="1.5" opacity="0.7"/>
+    <text x="320" y="338" font-family="'Courier New', monospace" font-size="7" fill="#8b5cf6" text-anchor="end">Input</text>
+
+    <!-- Hidden Layer 1 -->
+    <circle cx="480" cy="270" r="10" fill="none" stroke="#6366f1" stroke-width="1.5" opacity="0.7"/>
+    <circle cx="480" cy="300" r="10" fill="none" stroke="#6366f1" stroke-width="1.5" opacity="0.7"/>
+    <circle cx="480" cy="330" r="10" fill="none" stroke="#6366f1" stroke-width="1.5" opacity="0.7"/>
+    <circle cx="480" cy="360" r="10" fill="none" stroke="#6366f1" stroke-width="1.5" opacity="0.7"/>
+    <circle cx="480" cy="390" r="10" fill="none" stroke="#6366f1" stroke-width="1.5" opacity="0.7"/>
+    <text x="480" y="418" font-family="'Courier New', monospace" font-size="7" fill="#6366f1" text-anchor="middle">Hidden 1</text>
+
+    <!-- Hidden Layer 2 -->
+    <circle cx="620" cy="280" r="10" fill="none" stroke="#22d3ee" stroke-width="1.5" opacity="0.7"/>
+    <circle cx="620" cy="310" r="10" fill="none" stroke="#22d3ee" stroke-width="1.5" opacity="0.7"/>
+    <circle cx="620" cy="340" r="10" fill="none" stroke="#22d3ee" stroke-width="1.5" opacity="0.7"/>
+    <circle cx="620" cy="370" r="10" fill="none" stroke="#22d3ee" stroke-width="1.5" opacity="0.7"/>
+    <circle cx="620" cy="400" r="10" fill="none" stroke="#22d3ee" stroke-width="1.5" opacity="0.7"/>
+    <text x="620" y="428" font-family="'Courier New', monospace" font-size="7" fill="#22d3ee" text-anchor="middle">Hidden 2</text>
+
+    <!-- Hidden Layer 3 -->
+    <circle cx="760" cy="290" r="10" fill="none" stroke="#34d399" stroke-width="1.5" opacity="0.7"/>
+    <circle cx="760" cy="320" r="10" fill="none" stroke="#34d399" stroke-width="1.5" opacity="0.7"/>
+    <circle cx="760" cy="350" r="10" fill="none" stroke="#34d399" stroke-width="1.5" opacity="0.7"/>
+    <circle cx="760" cy="380" r="10" fill="none" stroke="#34d399" stroke-width="1.5" opacity="0.7"/>
+    <text x="760" y="418" font-family="'Courier New', monospace" font-size="7" fill="#34d399" text-anchor="middle">Hidden 3</text>
+
+    <!-- Output Layer -->
+    <circle cx="880" cy="305" r="10" fill="#f87171" stroke="#f87171" stroke-width="1.5" opacity="0.8"/>
+    <circle cx="880" cy="345" r="10" fill="#34d399" stroke="#34d399" stroke-width="1.5" opacity="0.8"/>
+    <circle cx="880" cy="385" r="10" fill="#fbbf24" stroke="#fbbf24" stroke-width="1.5" opacity="0.8"/>
+    <text x="900" y="338" font-family="'Courier New', monospace" font-size="7" fill="#f87171">Malicious</text>
+    <text x="900" y="348" font-family="'Courier New', monospace" font-size="7" fill="#34d399">Benign</text>
+    <text x="900" y="388" font-family="'Courier New', monospace" font-size="7" fill="#fbbf24">Suspicious</text>
+    <text x="880" y="418" font-family="'Courier New', monospace" font-size="7" fill="#a78bfa" text-anchor="middle">Output</text>
+
+    <!-- Connections Input → H1 (sample) -->
+    <line x1="350" y1="290" x2="470" y2="270" stroke="#8b5cf6" stroke-width="0.5" opacity="0.3"/>
+    <line x1="350" y1="290" x2="470" y2="300" stroke="#8b5cf6" stroke-width="0.5" opacity="0.4"/>
+    <line x1="350" y1="290" x2="470" y2="330" stroke="#8b5cf6" stroke-width="0.5" opacity="0.2"/>
+    <line x1="350" y1="290" x2="470" y2="360" stroke="#8b5cf6" stroke-width="0.5" opacity="0.3"/>
+    <line x1="350" y1="290" x2="470" y2="390" stroke="#8b5cf6" stroke-width="0.5" opacity="0.2"/>
+    <line x1="350" y1="320" x2="470" y2="270" stroke="#8b5cf6" stroke-width="0.5" opacity="0.3"/>
+    <line x1="350" y1="320" x2="470" y2="300" stroke="#8b5cf6" stroke-width="0.5" opacity="0.5"/>
+    <line x1="350" y1="320" x2="470" y2="330" stroke="#8b5cf6" stroke-width="0.5" opacity="0.3"/>
+    <line x1="350" y1="320" x2="470" y2="360" stroke="#8b5cf6" stroke-width="0.5" opacity="0.4"/>
+    <line x1="350" y1="320" x2="470" y2="390" stroke="#8b5cf6" stroke-width="0.5" opacity="0.2"/>
+    <line x1="350" y1="350" x2="470" y2="270" stroke="#8b5cf6" stroke-width="0.5" opacity="0.2"/>
+    <line x1="350" y1="350" x2="470" y2="300" stroke="#8b5cf6" stroke-width="0.5" opacity="0.3"/>
+    <line x1="350" y1="350" x2="470" y2="330" stroke="#8b5cf6" stroke-width="0.5" opacity="0.4"/>
+    <line x1="350" y1="350" x2="470" y2="360" stroke="#8b5cf6" stroke-width="0.5" opacity="0.3"/>
+    <line x1="350" y1="350" x2="470" y2="390" stroke="#8b5cf6" stroke-width="0.5" opacity="0.5"/>
+    <line x1="350" y1="380" x2="470" y2="270" stroke="#8b5cf6" stroke-width="0.5" opacity="0.3"/>
+    <line x1="350" y1="380" x2="470" y2="300" stroke="#8b5cf6" stroke-width="0.5" opacity="0.2"/>
+    <line x1="350" y1="380" x2="470" y2="330" stroke="#8b5cf6" stroke-width="0.5" opacity="0.3"/>
+    <line x1="350" y1="380" x2="470" y2="360" stroke="#8b5cf6" stroke-width="0.5" opacity="0.4"/>
+    <line x1="350" y1="380" x2="470" y2="390" stroke="#8b5cf6" stroke-width="0.5" opacity="0.3"/>
+
+    <!-- Connections H1 → H2 -->
+    <line x1="490" y1="270" x2="610" y2="280" stroke="#6366f1" stroke-width="0.5" opacity="0.4"/>
+    <line x1="490" y1="300" x2="610" y2="310" stroke="#6366f1" stroke-width="0.5" opacity="0.5"/>
+    <line x1="490" y1="330" x2="610" y2="340" stroke="#6366f1" stroke-width="0.5" opacity="0.4"/>
+    <line x1="490" y1="360" x2="610" y2="370" stroke="#6366f1" stroke-width="0.5" opacity="0.3"/>
+    <line x1="490" y1="390" x2="610" y2="400" stroke="#6366f1" stroke-width="0.5" opacity="0.4"/>
+    <line x1="490" y1="270" x2="610" y2="310" stroke="#6366f1" stroke-width="0.5" opacity="0.3"/>
+    <line x1="490" y1="300" x2="610" y2="340" stroke="#6366f1" stroke-width="0.5" opacity="0.4"/>
+    <line x1="490" y1="330" x2="610" y2="370" stroke="#6366f1" stroke-width="0.5" opacity="0.3"/>
+    <line x1="490" y1="360" x2="610" y2="280" stroke="#6366f1" stroke-width="0.5" opacity="0.2"/>
+    <line x1="490" y1="390" x2="610" y2="310" stroke="#6366f1" stroke-width="0.5" opacity="0.3"/>
+
+    <!-- Connections H2 → H3 -->
+    <line x1="630" y1="280" x2="750" y2="290" stroke="#22d3ee" stroke-width="0.5" opacity="0.4"/>
+    <line x1="630" y1="310" x2="750" y2="320" stroke="#22d3ee" stroke-width="0.5" opacity="0.5"/>
+    <line x1="630" y1="340" x2="750" y2="350" stroke="#22d3ee" stroke-width="0.5" opacity="0.4"/>
+    <line x1="630" y1="370" x2="750" y2="380" stroke="#22d3ee" stroke-width="0.5" opacity="0.3"/>
+    <line x1="630" y1="400" x2="750" y2="290" stroke="#22d3ee" stroke-width="0.5" opacity="0.2"/>
+    <line x1="630" y1="280" x2="750" y2="350" stroke="#22d3ee" stroke-width="0.5" opacity="0.3"/>
+    <line x1="630" y1="310" x2="750" y2="380" stroke="#22d3ee" stroke-width="0.5" opacity="0.4"/>
+    <line x1="630" y1="340" x2="750" y2="290" stroke="#22d3ee" stroke-width="0.5" opacity="0.3"/>
+
+    <!-- Connections H3 → Output -->
+    <line x1="770" y1="290" x2="870" y2="305" stroke="#34d399" stroke-width="0.8" opacity="0.5"/>
+    <line x1="770" y1="320" x2="870" y2="305" stroke="#f87171" stroke-width="0.8" opacity="0.5"/>
+    <line x1="770" y1="350" x2="870" y2="345" stroke="#34d399" stroke-width="0.8" opacity="0.5"/>
+    <line x1="770" y1="380" x2="870" y2="385" stroke="#fbbf24" stroke-width="0.8" opacity="0.5"/>
+    <line x1="770" y1="290" x2="870" y2="345" stroke="#34d399" stroke-width="0.5" opacity="0.3"/>
+    <line x1="770" y1="320" x2="870" y2="385" stroke="#fbbf24" stroke-width="0.5" opacity="0.3"/>
+    <line x1="770" y1="350" x2="870" y2="305" stroke="#f87171" stroke-width="0.5" opacity="0.3"/>
+    <line x1="770" y1="380" x2="870" y2="345" stroke="#34d399" stroke-width="0.5" opacity="0.3"/>
+
+    <!-- Highlighted signal path -->
+    <line x1="350" y1="320" x2="470" y2="300" stroke="#22d3ee" stroke-width="1.5" opacity="0.8"/>
+    <line x1="490" y1="300" x2="610" y2="340" stroke="#22d3ee" stroke-width="1.5" opacity="0.7"/>
+    <line x1="630" y1="340" x2="750" y2="350" stroke="#22d3ee" stroke-width="1.5" opacity="0.6"/>
+    <line x1="770" y1="350" x2="870" y2="345" stroke="#34d399" stroke-width="1.5" opacity="0.8"/>
+  </g>
+
+  <!-- ===== ROW 3: AIOps Workflows ===== -->
+
+  <!-- Log Analysis -->
+  <g filter="url(#aiShadow)">
+    <rect x="20" y="210" width="200" height="120" rx="10" fill="#0d0b1a" stroke="#8b5cf6" stroke-width="1.5"/>
+    <rect x="20" y="210" width="200" height="24" rx="10" ry="10" fill="url(#aiPurple)"/>
+    <rect x="20" y="226" width="200" height="8" fill="url(#aiPurple)"/>
+    <text x="120" y="228" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">📋 Log Analysis (NLP)</text>
+    <text x="32" y="248" font-family="'Courier New', monospace" font-size="7" fill="#a78bfa">• Elastic ML anomaly scores</text>
+    <text x="32" y="260" font-family="'Courier New', monospace" font-size="7" fill="#a78bfa">• Splunk UBA behavioral</text>
+    <text x="32" y="272" font-family="'Courier New', monospace" font-size="7" fill="#a78bfa">• Log pattern extraction</text>
+    <text x="32" y="284" font-family="'Courier New', monospace" font-size="7" fill="#a78bfa">• Event correlation AI</text>
+    <text x="32" y="296" font-family="'Courier New', monospace" font-size="7" fill="#a78bfa">• NLP threat classification</text>
+    <rect x="32" y="304" width="60" height="16" rx="3" fill="#1e1b3a" stroke="#8b5cf6" stroke-width="1"/>
+    <text x="62" y="315" font-family="'Courier New', monospace" font-size="7" fill="#8b5cf6" text-anchor="middle">BERT</text>
+    <rect x="98" y="304" width="60" height="16" rx="3" fill="#1e1b3a" stroke="#8b5cf6" stroke-width="1"/>
+    <text x="128" y="315" font-family="'Courier New', monospace" font-size="7" fill="#8b5cf6" text-anchor="middle">GPT-4</text>
+    <rect x="164" y="304" width="44" height="16" rx="3" fill="#1e1b3a" stroke="#8b5cf6" stroke-width="1"/>
+    <text x="186" y="315" font-family="'Courier New', monospace" font-size="7" fill="#8b5cf6" text-anchor="middle">LLM</text>
+  </g>
+
+  <!-- Arrow Log → Anomaly -->
+  <line x1="120" y1="330" x2="120" y2="348" stroke="#8b5cf6" stroke-width="1.5" marker-end="url(#aiArrow)"/>
+
+  <!-- Anomaly Detection -->
+  <g filter="url(#aiShadow)">
+    <rect x="20" y="352" width="200" height="120" rx="10" fill="#0d0b1a" stroke="#6366f1" stroke-width="1.5"/>
+    <rect x="20" y="352" width="200" height="24" rx="10" ry="10" fill="url(#aiBlue)"/>
+    <rect x="20" y="368" width="200" height="8" fill="url(#aiBlue)"/>
+    <text x="120" y="370" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">🔍 Anomaly Detection</text>
+    <text x="32" y="390" font-family="'Courier New', monospace" font-size="7" fill="#818cf8">• Isolation Forest</text>
+    <text x="32" y="402" font-family="'Courier New', monospace" font-size="7" fill="#818cf8">• Autoencoders (LSTM)</text>
+    <text x="32" y="414" font-family="'Courier New', monospace" font-size="7" fill="#818cf8">• One-Class SVM</text>
+    <text x="32" y="426" font-family="'Courier New', monospace" font-size="7" fill="#818cf8">• GAN-based detection</text>
+    <text x="32" y="438" font-family="'Courier New', monospace" font-size="7" fill="#818cf8">• Statistical process control</text>
+    <rect x="32" y="448" width="80" height="14" rx="3" fill="#1e1b3a"/>
+    <text x="72" y="458" font-family="'Courier New', monospace" font-size="7" fill="#818cf8" text-anchor="middle">Threshold: 0.85</text>
+    <rect x="118" y="448" width="80" height="14" rx="3" fill="#238636"/>
+    <text x="158" y="458" font-family="'Courier New', monospace" font-size="7" fill="#3fb950" text-anchor="middle">Alert: Active ✓</text>
+  </g>
+
+  <!-- Arrow Anomaly → Predictive -->
+  <line x1="120" y1="472" x2="120" y2="490" stroke="#6366f1" stroke-width="1.5" marker-end="url(#aiArrow)"/>
+
+  <!-- Predictive Analytics -->
+  <g filter="url(#aiShadow)">
+    <rect x="20" y="494" width="200" height="110" rx="10" fill="#0d0b1a" stroke="#22d3ee" stroke-width="1.5"/>
+    <rect x="20" y="494" width="200" height="24" rx="10" ry="10" fill="url(#aiCyan)"/>
+    <rect x="20" y="510" width="200" height="8" fill="url(#aiCyan)"/>
+    <text x="120" y="512" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">📈 Predictive Analytics</text>
+    <text x="32" y="532" font-family="'Courier New', monospace" font-size="7" fill="#67e8f9">• Threat forecasting</text>
+    <text x="32" y="544" font-family="'Courier New', monospace" font-size="7" fill="#67e8f9">• Attack surface modeling</text>
+    <text x="32" y="556" font-family="'Courier New', monospace" font-size="7" fill="#67e8f9">• Risk scoring (ML)</text>
+    <text x="32" y="568" font-family="'Courier New', monospace" font-size="7" fill="#67e8f9">• Vulnerability prediction</text>
+    <text x="32" y="580" font-family="'Courier New', monospace" font-size="7" fill="#67e8f9">• Time-series forecasting</text>
+    <rect x="32" y="590" width="100" height="10" rx="3" fill="#1e1b3a"/>
+    <rect x="32" y="590" width="85" height="10" rx="3" fill="#22d3ee" opacity="0.4"/>
+    <text x="138" y="599" font-family="'Courier New', monospace" font-size="7" fill="#22d3ee">85% accuracy</text>
+  </g>
+
+  <!-- ===== Right Side: ML Tools Stack ===== -->
+  <g filter="url(#aiShadow)">
+    <rect x="940" y="210" width="240" height="394" rx="10" fill="#0d0b1a" stroke="#ec4899" stroke-width="1.5"/>
+    <rect x="940" y="210" width="240" height="26" rx="10" ry="10" fill="url(#aiPink)"/>
+    <rect x="940" y="226" width="240" height="10" fill="url(#aiPink)"/>
+    <text x="1060" y="228" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">🛠️ AI/ML Tools Stack</text>
+
+    <!-- TensorFlow -->
+    <rect x="955" y="248" width="210" height="40" rx="6" fill="#1e1b3a" stroke="#ff6f00" stroke-width="1"/>
+    <text x="1060" y="265" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#ff6f00" text-anchor="middle" font-weight="bold">TensorFlow 2.x</text>
+    <text x="1060" y="280" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Deep Learning • Keras API</text>
+
+    <!-- PyTorch -->
+    <rect x="955" y="295" width="210" height="40" rx="6" fill="#1e1b3a" stroke="#ee4c2c" stroke-width="1"/>
+    <text x="1060" y="312" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#ee4c2c" text-anchor="middle" font-weight="bold">PyTorch</text>
+    <text x="1060" y="327" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Research • Dynamic Graphs</text>
+
+    <!-- Splunk ML -->
+    <rect x="955" y="342" width="210" height="40" rx="6" fill="#1e1b3a" stroke="#65a637" stroke-width="1"/>
+    <text x="1060" y="359" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#65a637" text-anchor="middle" font-weight="bold">Splunk ML</text>
+    <text x="1060" y="374" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">UBA + Adaptive Response</text>
+
+    <!-- Elastic ML -->
+    <rect x="955" y="389" width="210" height="40" rx="6" fill="#1e1b3a" stroke="#fec514" stroke-width="1"/>
+    <text x="1060" y="406" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#fec514" text-anchor="middle" font-weight="bold">Elastic ML</text>
+    <text x="1060" y="421" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Anomaly Detection + NLP</text>
+
+    <!-- Hugging Face -->
+    <rect x="955" y="436" width="210" height="40" rx="6" fill="#1e1b3a" stroke="#ffcc00" stroke-width="1"/>
+    <text x="1060" y="453" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#ffcc00" text-anchor="middle" font-weight="bold">Hugging Face</text>
+    <text x="1060" y="468" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Transformers • Security NLP</text>
+
+    <!-- MLflow -->
+    <rect x="955" y="483" width="210" height="40" rx="6" fill="#1e1b3a" stroke="#0194e2" stroke-width="1"/>
+    <text x="1060" y="500" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#0194e2" text-anchor="middle" font-weight="bold">MLflow</text>
+    <text x="1060" y="515" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Experiment Tracking + Registry</text>
+
+    <!-- Jupyter -->
+    <rect x="955" y="530" width="210" height="40" rx="6" fill="#1e1b3a" stroke="#f37626" stroke-width="1"/>
+    <text x="1060" y="547" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#f37626" text-anchor="middle" font-weight="bold">JupyterHub</text>
+    <text x="1060" y="562" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Notebooks • Collaboration</text>
+
+    <!-- Model serving -->
+    <rect x="955" y="577" width="210" height="22" rx="5" fill="#1e1b3a" stroke="#34d399" stroke-width="1"/>
+    <text x="1060" y="592" font-family="'Courier New', monospace" font-size="8" fill="#34d399" text-anchor="middle">Serving: TF Serving + Triton + ONNX</text>
+  </g>
+
+  <!-- ===== Bottom Center: Metrics Dashboard ===== -->
+  <g filter="url(#aiShadow)">
+    <rect x="240" y="494" width="680" height="110" rx="10" fill="#0d0b1a" stroke="#fbbf24" stroke-width="1.5"/>
+    <rect x="240" y="494" width="680" height="24" rx="10" ry="10" fill="#fbbf24"/>
+    <rect x="240" y="510" width="680" height="8" fill="#fbbf24"/>
+    <text x="580" y="512" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#0d0b1a" text-anchor="middle" font-weight="bold">📊 AI Security Operations — Performance Metrics</text>
+
+    <!-- Metrics -->
+    <text x="255" y="535" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#8b949e">Detection Rate:</text>
+    <rect x="335" y="526" width="100" height="12" rx="3" fill="#1e1b3a"/>
+    <rect x="335" y="526" width="97" height="12" rx="3" fill="#34d399"/>
+    <text x="440" y="535" font-family="'Courier New', monospace" font-size="8" fill="#34d399">99.7%</text>
+
+    <text x="480" y="535" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#8b949e">False Positive:</text>
+    <rect x="555" y="526" width="100" height="12" rx="3" fill="#1e1b3a"/>
+    <rect x="555" y="526" width="5" height="12" rx="3" fill="#f87171"/>
+    <text x="660" y="535" font-family="'Courier New', monospace" font-size="8" fill="#34d399">0.3%</text>
+
+    <text x="700" y="535" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#8b949e">Response Time:</text>
+    <text x="780" y="535" font-family="'Courier New', monospace" font-size="8" fill="#34d399">&lt;50ms</text>
+
+    <text x="830" y="535" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#8b949e">Models Active:</text>
+    <text x="900" y="535" font-family="'Courier New', monospace" font-size="8" fill="#22d3ee">24</text>
+
+    <!-- Throughput info -->
+    <text x="255" y="558" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#8b949e">Inference/sec:</text>
+    <text x="340" y="558" font-family="'Courier New', monospace" font-size="8" fill="#22d3ee">15,000 EPS</text>
+    <text x="430" y="558" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#8b949e">Data Pipeline:</text>
+    <text x="510" y="558" font-family="'Courier New', monospace" font-size="8" fill="#22d3ee">Kafka → Spark → ML</text>
+    <text x="660" y="558" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#8b949e">Model Store:</text>
+    <text x="730" y="558" font-family="'Courier New', monospace" font-size="8" fill="#22d3ee">MLflow Registry</text>
+    <text x="855" y="558" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#8b949e">GPU Util:</text>
+    <text x="905" y="558" font-family="'Courier New', monospace" font-size="8" fill="#fbbf24">78%</text>
+
+    <!-- Bottom status bar -->
+    <text x="255" y="580" font-family="'Courier New', monospace" font-size="7" fill="#8b949e">Last Retrained: 2h ago</text>
+    <text x="420" y="580" font-family="'Courier New', monospace" font-size="7" fill="#8b949e">Drift Score: 0.02 (nominal)</text>
+    <text x="610" y="580" font-family="'Courier New', monospace" font-size="7" fill="#8b949e">Feature Store: 4,500 features</text>
+    <text x="810" y="580" font-family="'Courier New', monospace" font-size="7" fill="#3fb950">Pipeline: ● Healthy</text>
+
+    <!-- Graph-like visualization -->
+    <polyline points="255,592 280,588 305,590 330,585 355,587 380,582 405,584 430,579 455,581 480,576 505,578 530,573 555,575 580,570" fill="none" stroke="#22d3ee" stroke-width="1" opacity="0.6"/>
+    <polyline points="580,570 605,572 630,568 655,570 680,566 705,568 730,564 755,566 780,562 805,564 830,560 855,562 880,558 905,560" fill="none" stroke="#34d399" stroke-width="1" opacity="0.6"/>
+  </g>
+
+  <!-- ===== Bottom Left: AI Ethics & Governance ===== -->
+  <g filter="url(#aiShadow)">
+    <rect x="240" y="615" width="680" height="25" rx="6" fill="#0d0b1a" stroke="#8b5cf6" stroke-width="1"/>
+    <text x="580" y="632" font-family="'Courier New', monospace" font-size="8" fill="#a78bfa" text-anchor="middle">🧪 AI Governance: Model Explainability (SHAP/LIME) • Bias Detection • Fairness Audits • Adversarial Robustness Testing • Model Versioning (DVC)</text>
+  </g>
+</svg>

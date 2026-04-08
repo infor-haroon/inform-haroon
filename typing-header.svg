@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 55" width="520" height="55">
+  <defs>
+    <clipPath id="type-clip">
+      <rect x="0" y="0" width="0" height="55">
+        <animate
+          attributeName="width"
+          values="0;520;520;0;0;520;520;0;0;520;520;0;0;520;520;0;0;520;520;0;0;520;520;0;0;520;520;0;0;520;520;0;0;520;520;0;0"
+          keyTimes="0;0.0417;0.0729;0.0938;0.1042;0.1042;0.1458;0.1771;0.1979;0.2083;0.2083;0.25;0.2813;0.3021;0.3125;0.3125;0.3542;0.3854;0.4063;0.4167;0.4167;0.4583;0.4896;0.5104;0.5208;0.5208;0.5625;0.5938;0.6146;0.625;0.625;0.6667;0.6979;0.7188;0.7292;0.7292;0.7708;0.8021;0.8229;0.8333"
+          dur="24s"
+          repeatCount="indefinite"
+        />
+      </rect>
+    </clipPath>
+  </defs>
+
+  <style>
+    .prompt { font-family: 'Courier New', Courier, monospace; font-size: 26px; fill: #3fb950; }
+    .title  { font-family: 'Courier New', Courier, monospace; font-size: 24px; fill: #58a6ff; }
+  </style>
+
+  <!-- Terminal prompt -->
+  <text x="8" y="38" class="prompt">&gt;</text>
+
+  <!-- Clipped text group — typing reveal -->
+  <g clip-path="url(#type-clip)">
+
+    <text x="35" y="38" class="title" visibility="hidden">
+      Cyber Security Expert
+      <set attributeName="visibility" to="visible" begin="0s" dur="2.5s" repeatCount="indefinite"/>
+    </text>
+
+    <text x="35" y="38" class="title" visibility="hidden">
+      DevSecOps Engineer
+      <set attributeName="visibility" to="visible" begin="3s" dur="2.5s" repeatCount="indefinite"/>
+    </text>
+
+    <text x="35" y="38" class="title" visibility="hidden">
+      Cloud Security Architect
+      <set attributeName="visibility" to="visible" begin="6s" dur="2.5s" repeatCount="indefinite"/>
+    </text>
+
+    <text x="35" y="38" class="title" visibility="hidden">
+      SCADA/ICS Specialist
+      <set attributeName="visibility" to="visible" begin="9s" dur="2.5s" repeatCount="indefinite"/>
+    </text>
+
+    <text x="35" y="38" class="title" visibility="hidden">
+      AI/ML Security Researcher
+      <set attributeName="visibility" to="visible" begin="12s" dur="2.5s" repeatCount="indefinite"/>
+    </text>
+
+    <text x="35" y="38" class="title" visibility="hidden">
+      Multi-Cloud Strategist
+      <set attributeName="visibility" to="visible" begin="15s" dur="2.5s" repeatCount="indefinite"/>
+    </text>
+
+    <text x="35" y="38" class="title" visibility="hidden">
+      Offensive Security Analyst
+      <set attributeName="visibility" to="visible" begin="18s" dur="2.5s" repeatCount="indefinite"/>
+    </text>
+
+    <text x="35" y="38" class="title" visibility="hidden">
+      Blue Team Defender
+      <set attributeName="visibility" to="visible" begin="21s" dur="2.5s" repeatCount="indefinite"/>
+    </text>
+
+  </g>
+
+  <!-- Blinking cursor — synced to typing position -->
+  <rect x="28" y="19" width="2.5" height="24" rx="1" fill="#58a6ff">
+    <animate
+      attributeName="x"
+      values="28;500;500;28;28;500;500;28;28;500;500;28;28;500;500;28;28;500;500;28;28;500;500;28;28;500;500;28;28;500;500;28;28;500;500;28;28"
+      keyTimes="0;0.0417;0.0729;0.0938;0.1042;0.1042;0.1458;0.1771;0.1979;0.2083;0.2083;0.25;0.2813;0.3021;0.3125;0.3125;0.3542;0.3854;0.4063;0.4167;0.4167;0.4583;0.4896;0.5104;0.5208;0.5208;0.5625;0.5938;0.6146;0.625;0.625;0.6667;0.6979;0.7188;0.7292;0.7292;0.7708;0.8021;0.8229;0.8333"
+      dur="24s"
+      repeatCount="indefinite"
+    />
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.45;0.5;0.95;1"
+      dur="0.8s"
+      repeatCount="indefinite"
+    />
+  </rect>
+</svg>

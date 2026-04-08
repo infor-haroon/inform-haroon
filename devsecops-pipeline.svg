@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+    <!-- Accent gradients -->
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#58a6ff"/>
+      <stop offset="100%" style="stop-color:#1f6feb"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3fb950"/>
+      <stop offset="100%" style="stop-color:#238636"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f85149"/>
+      <stop offset="100%" style="stop-color:#da3633"/>
+    </linearGradient>
+    <linearGradient id="yellowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d29922"/>
+      <stop offset="100%" style="stop-color:#9e6a03"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#bc8cff"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0883e"/>
+      <stop offset="100%" style="stop-color:#d18616"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#39d2c0"/>
+      <stop offset="100%" style="stop-color:#1a9e8f"/>
+    </linearGradient>
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Arrow marker -->
+    <marker id="arrowBlue" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,4 L0,8 L3,4 Z" fill="#58a6ff"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,4 L0,8 L3,4 Z" fill="#3fb950"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,4 L0,8 L3,4 Z" fill="#f85149"/>
+    </marker>
+    <marker id="arrowYellow" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,4 L0,8 L3,4 Z" fill="#d29922"/>
+    </marker>
+    <!-- Grid pattern -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#21262d" stroke-width="0.5" opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="600" fill="url(#bgGrad)" rx="12"/>
+  <rect width="1200" height="600" fill="url(#grid)" rx="12"/>
+
+  <!-- Border -->
+  <rect x="1" y="1" width="1198" height="598" fill="none" stroke="#30363d" stroke-width="2" rx="12"/>
+
+  <!-- Title Bar -->
+  <rect x="0" y="0" width="1200" height="52" fill="#0d1117" rx="12" ry="12"/>
+  <rect x="0" y="30" width="1200" height="22" fill="#0d1117"/>
+  <line x1="0" y1="52" x2="1200" y2="52" stroke="#30363d" stroke-width="1.5"/>
+  <!-- Terminal dots -->
+  <circle cx="24" cy="26" r="7" fill="#f85149"/>
+  <circle cx="46" cy="26" r="7" fill="#d29922"/>
+  <circle cx="68" cy="26" r="7" fill="#3fb950"/>
+  <!-- Title -->
+  <text x="600" y="33" font-family="'Courier New', monospace" font-size="16" fill="#c9d1d9" text-anchor="middle" font-weight="bold">🔐 DevSecOps CI/CD Pipeline — Security-First Software Delivery</text>
+
+  <!-- ===== ROW 1: Main Pipeline Stages ===== -->
+
+  <!-- Stage 1: Code Commit -->
+  <g filter="url(#shadow)">
+    <rect x="28" y="80" width="115" height="85" rx="10" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+    <rect x="28" y="80" width="115" height="28" rx="10" ry="10" fill="url(#blueGrad)"/>
+    <rect x="28" y="98" width="115" height="10" fill="url(#blueGrad)"/>
+    <text x="85" y="100" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">CODE COMMIT</text>
+    <!-- Git icon -->
+    <circle cx="60" cy="128" r="8" fill="none" stroke="#58a6ff" stroke-width="1.5"/>
+    <circle cx="60" cy="122" r="3" fill="#58a6ff"/>
+    <circle cx="60" cy="134" r="3" fill="#58a6ff"/>
+    <line x1="60" y1="125" x2="60" y2="131" stroke="#58a6ff" stroke-width="1.5"/>
+    <text x="80" y="125" font-family="'Courier New', monospace" font-size="9" fill="#8b949e">git push</text>
+    <text x="80" y="137" font-family="'Courier New', monospace" font-size="9" fill="#8b949e">main</text>
+    <!-- Lock icon (security gate) -->
+    <rect x="110" y="146" width="22" height="16" rx="3" fill="url(#greenGrad)" opacity="0.9"/>
+    <path d="M115,146 L115,140 Q115,134 121,134 Q127,134 127,140 L127,146" fill="none" stroke="#3fb950" stroke-width="1.5"/>
+    <circle cx="121" cy="153" r="2" fill="#ffffff"/>
+  </g>
+
+  <!-- Arrow 1→2 -->
+  <line x1="143" y1="122" x2="158" y2="122" stroke="#58a6ff" stroke-width="2" marker-end="url(#arrowBlue)" opacity="0.8"/>
+
+  <!-- Stage 2: SAST (SonarQube) -->
+  <g filter="url(#shadow)">
+    <rect x="162" y="80" width="115" height="85" rx="10" fill="#161b22" stroke="#f0883e" stroke-width="1.5"/>
+    <rect x="162" y="80" width="115" height="28" rx="10" ry="10" fill="url(#orangeGrad)"/>
+    <rect x="162" y="98" width="115" height="10" fill="url(#orangeGrad)"/>
+    <text x="219" y="100" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">SAST</text>
+    <!-- SonarQube representation -->
+    <rect x="175" y="115" width="40" height="18" rx="4" fill="#1f6feb"/>
+    <text x="195" y="128" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#ffffff" text-anchor="middle">SonarQube</text>
+    <rect x="175" y="138" width="40" height="10" rx="2" fill="#238636"/>
+    <text x="195" y="146" font-family="'Courier New', monospace" font-size="7" fill="#ffffff" text-anchor="middle">Quality Gate</text>
+    <text x="240" y="128" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">Static</text>
+    <text x="240" y="138" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">Analysis</text>
+    <!-- Lock -->
+    <rect x="244" y="146" width="22" height="16" rx="3" fill="url(#greenGrad)" opacity="0.9"/>
+    <path d="M249,146 L249,140 Q249,134 255,134 Q261,134 261,140 L261,146" fill="none" stroke="#3fb950" stroke-width="1.5"/>
+    <circle cx="255" cy="153" r="2" fill="#ffffff"/>
+  </g>
+
+  <!-- Arrow 2→3 -->
+  <line x1="277" y1="122" x2="292" y2="122" stroke="#f0883e" stroke-width="2" marker-end="url(#arrowBlue)" opacity="0.8"/>
+
+  <!-- Stage 3: DAST -->
+  <g filter="url(#shadow)">
+    <rect x="296" y="80" width="115" height="85" rx="10" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
+    <rect x="296" y="80" width="115" height="28" rx="10" ry="10" fill="url(#redGrad)"/>
+    <rect x="296" y="98" width="115" height="10" fill="url(#redGrad)"/>
+    <text x="353" y="100" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">DAST</text>
+    <!-- OWASP ZAP representation -->
+    <rect x="309" y="115" width="45" height="18" rx="4" fill="#6e40c9"/>
+    <text x="331" y="128" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#ffffff" text-anchor="middle">OWASP ZAP</text>
+    <text x="375" y="125" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">Dynamic</text>
+    <text x="375" y="137" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">Testing</text>
+    <text x="375" y="149" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">Runtime</text>
+    <!-- Lock -->
+    <rect x="378" y="146" width="22" height="16" rx="3" fill="url(#yellowGrad)" opacity="0.9"/>
+    <path d="M383,146 L383,140 Q383,134 389,134 Q395,134 395,140 L395,146" fill="none" stroke="#d29922" stroke-width="1.5"/>
+    <circle cx="389" cy="153" r="2" fill="#ffffff"/>
+  </g>
+
+  <!-- Arrow 3→4 -->
+  <line x1="411" y1="122" x2="426" y2="122" stroke="#f85149" stroke-width="2" marker-end="url(#arrowRed)" opacity="0.8"/>
+
+  <!-- Stage 4: SCA (Snyk) -->
+  <g filter="url(#shadow)">
+    <rect x="430" y="80" width="115" height="85" rx="10" fill="#161b22" stroke="#bc8cff" stroke-width="1.5"/>
+    <rect x="430" y="80" width="115" height="28" rx="10" ry="10" fill="url(#purpleGrad)"/>
+    <rect x="430" y="98" width="115" height="10" fill="url(#purpleGrad)"/>
+    <text x="487" y="100" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">SCA</text>
+    <!-- Snyk representation -->
+    <rect x="445" y="115" width="35" height="18" rx="4" fill="#c5462d"/>
+    <text x="462" y="128" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#ffffff" text-anchor="middle">Snyk</text>
+    <rect x="445" y="138" width="50" height="10" rx="2" fill="#238636"/>
+    <text x="470" y="146" font-family="'Courier New', monospace" font-size="7" fill="#ffffff" text-anchor="middle">License Check</text>
+    <text x="510" y="128" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">Dependency</text>
+    <text x="510" y="140" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">Vuln Scan</text>
+    <!-- Lock -->
+    <rect x="512" y="146" width="22" height="16" rx="3" fill="url(#greenGrad)" opacity="0.9"/>
+    <path d="M517,146 L517,140 Q517,134 523,134 Q529,134 529,140 L529,146" fill="none" stroke="#3fb950" stroke-width="1.5"/>
+    <circle cx="523" cy="153" r="2" fill="#ffffff"/>
+  </g>
+
+  <!-- Arrow 4→5 -->
+  <line x1="545" y1="122" x2="560" y2="122" stroke="#bc8cff" stroke-width="2" marker-end="url(#arrowBlue)" opacity="0.8"/>
+
+  <!-- Stage 5: Container Scan (Trivy) -->
+  <g filter="url(#shadow)">
+    <rect x="564" y="80" width="115" height="85" rx="10" fill="#161b22" stroke="#39d2c0" stroke-width="1.5"/>
+    <rect x="564" y="80" width="115" height="28" rx="10" ry="10" fill="url(#cyanGrad)"/>
+    <rect x="564" y="98" width="115" height="10" fill="url(#cyanGrad)"/>
+    <text x="621" y="100" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">CONTAINER SCAN</text>
+    <!-- Trivy representation -->
+    <rect x="577" y="115" width="35" height="18" rx="4" fill="#1a9e8f"/>
+    <text x="594" y="128" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#ffffff" text-anchor="middle">Trivy</text>
+    <text x="645" y="125" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">Image</text>
+    <text x="645" y="137" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">Vuln Scan</text>
+    <!-- Container icon -->
+    <rect x="577" y="138" width="35" height="12" rx="2" fill="none" stroke="#39d2c0" stroke-width="1"/>
+    <rect x="580" y="140" width="8" height="8" rx="1" fill="#39d2c0" opacity="0.4"/>
+    <rect x="590" y="140" width="8" height="8" rx="1" fill="#39d2c0" opacity="0.4"/>
+    <rect x="600" y="140" width="8" height="8" rx="1" fill="#39d2c0" opacity="0.4"/>
+    <!-- Lock -->
+    <rect x="646" y="146" width="22" height="16" rx="3" fill="url(#greenGrad)" opacity="0.9"/>
+    <path d="M651,146 L651,140 Q651,134 657,134 Q663,134 663,140 L663,146" fill="none" stroke="#3fb950" stroke-width="1.5"/>
+    <circle cx="657" cy="153" r="2" fill="#ffffff"/>
+  </g>
+
+  <!-- Arrow 5→6 -->
+  <line x1="679" y1="122" x2="694" y2="122" stroke="#39d2c0" stroke-width="2" marker-end="url(#arrowGreen)" opacity="0.8"/>
+
+  <!-- Stage 6: Image Build (Docker) -->
+  <g filter="url(#shadow)">
+    <rect x="698" y="80" width="115" height="85" rx="10" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+    <rect x="698" y="80" width="115" height="28" rx="10" ry="10" fill="url(#blueGrad)"/>
+    <rect x="698" y="98" width="115" height="10" fill="url(#blueGrad)"/>
+    <text x="755" y="100" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">IMAGE BUILD</text>
+    <!-- Docker whale icon -->
+    <rect x="711" y="115" width="40" height="18" rx="4" fill="#0db7ed"/>
+    <text x="731" y="128" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#ffffff" text-anchor="middle">Docker</text>
+    <text x="780" y="125" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">docker</text>
+    <text x="780" y="137" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">build -t</text>
+    <!-- Lock -->
+    <rect x="780" y="146" width="22" height="16" rx="3" fill="url(#greenGrad)" opacity="0.9"/>
+    <path d="M785,146 L785,140 Q785,134 791,134 Q797,134 797,140 L797,146" fill="none" stroke="#3fb950" stroke-width="1.5"/>
+    <circle cx="791" cy="153" r="2" fill="#ffffff"/>
+  </g>
+
+  <!-- Arrow 6→7 -->
+  <line x1="813" y1="122" x2="828" y2="122" stroke="#58a6ff" stroke-width="2" marker-end="url(#arrowBlue)" opacity="0.8"/>
+
+  <!-- Stage 7: IaC Scan (Terraform) -->
+  <g filter="url(#shadow)">
+    <rect x="832" y="80" width="115" height="85" rx="10" fill="#161b22" stroke="#d29922" stroke-width="1.5"/>
+    <rect x="832" y="80" width="115" height="28" rx="10" ry="10" fill="url(#yellowGrad)"/>
+    <rect x="832" y="98" width="115" height="10" fill="url(#yellowGrad)"/>
+    <text x="889" y="100" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">IaC SCAN</text>
+    <!-- Terraform representation -->
+    <rect x="847" y="115" width="50" height="18" rx="4" fill="#7b42bc"/>
+    <text x="872" y="128" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#ffffff" text-anchor="middle">Terraform</text>
+    <text x="915" y="125" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">tfsec</text>
+    <text x="915" y="137" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">Checkov</text>
+    <!-- Lock -->
+    <rect x="914" y="146" width="22" height="16" rx="3" fill="url(#greenGrad)" opacity="0.9"/>
+    <path d="M919,146 L919,140 Q919,134 925,134 Q931,134 931,140 L931,146" fill="none" stroke="#3fb950" stroke-width="1.5"/>
+    <circle cx="925" cy="153" r="2" fill="#ffffff"/>
+  </g>
+
+  <!-- Arrow 7→8 -->
+  <line x1="947" y1="122" x2="962" y2="122" stroke="#d29922" stroke-width="2" marker-end="url(#arrowYellow)" opacity="0.8"/>
+
+  <!-- Stage 8: Deployment (Kubernetes + Jenkins) -->
+  <g filter="url(#shadow)">
+    <rect x="966" y="80" width="115" height="85" rx="10" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+    <rect x="966" y="80" width="115" height="28" rx="10" ry="10" fill="url(#greenGrad)"/>
+    <rect x="966" y="98" width="115" height="10" fill="url(#greenGrad)"/>
+    <text x="1023" y="100" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">DEPLOY</text>
+    <!-- K8s + Jenkins -->
+    <rect x="979" y="115" width="32" height="16" rx="4" fill="#326ce5"/>
+    <text x="995" y="126" font-family="'Segoe UI', Arial, sans-serif" font-size="7" fill="#ffffff" text-anchor="middle">K8s</text>
+    <rect x="1015" y="115" width="40" height="16" rx="4" fill="#d33833"/>
+    <text x="1035" y="126" font-family="'Segoe UI', Arial, sans-serif" font-size="7" fill="#ffffff" text-anchor="middle">Jenkins</text>
+    <text x="1060" y="142" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">Prod</text>
+    <!-- Lock -->
+    <rect x="1048" y="146" width="22" height="16" rx="3" fill="url(#greenGrad)" opacity="0.9"/>
+    <path d="M1053,146 L1053,140 Q1053,134 1059,134 Q1065,134 1065,140 L1065,146" fill="none" stroke="#3fb950" stroke-width="1.5"/>
+    <circle cx="1059" cy="153" r="2" fill="#ffffff"/>
+  </g>
+
+  <!-- Arrow 8→9 -->
+  <line x1="1081" y1="122" x2="1096" y2="122" stroke="#3fb950" stroke-width="2" marker-end="url(#arrowGreen)" opacity="0.8"/>
+
+  <!-- Stage 9: Monitoring (Prometheus) -->
+  <g filter="url(#shadow)">
+    <rect x="1098" y="80" width="80" height="85" rx="10" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
+    <rect x="1098" y="80" width="80" height="28" rx="10" ry="10" fill="url(#redGrad)"/>
+    <rect x="1098" y="98" width="80" height="10" fill="url(#redGrad)"/>
+    <text x="1138" y="100" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">MONITOR</text>
+    <rect x="1108" y="115" width="55" height="16" rx="4" fill="#e6522c"/>
+    <text x="1135" y="126" font-family="'Segoe UI', Arial, sans-serif" font-size="7" fill="#ffffff" text-anchor="middle">Prometheus</text>
+    <text x="1138" y="145" font-family="'Courier New', monospace" font-size="8" fill="#8b949e" text-anchor="middle">Grafana</text>
+    <text x="1138" y="156" font-family="'Courier New', monospace" font-size="8" fill="#8b949e" text-anchor="middle">AlertManager</text>
+  </g>
+
+  <!-- ===== ROW 2: Pipeline Orchestration Layer ===== -->
+
+  <!-- Jenkins Pipeline Runner -->
+  <g filter="url(#shadow)">
+    <rect x="28" y="195" width="220" height="100" rx="10" fill="#161b22" stroke="#d33833" stroke-width="1.5"/>
+    <rect x="28" y="195" width="220" height="30" rx="10" ry="10" fill="#d33833"/>
+    <rect x="28" y="215" width="220" height="10" fill="#d33833"/>
+    <text x="138" y="215" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">⚙️ Jenkins Pipeline Orchestration</text>
+    <text x="42" y="245" font-family="'Courier New', monospace" font-size="9" fill="#8b949e">pipeline { agent any }</text>
+    <text x="42" y="258" font-family="'Courier New', monospace" font-size="9" fill="#8b949e">  stages { build → test → deploy }</text>
+    <text x="42" y="271" font-family="'Courier New', monospace" font-size="9" fill="#8b949e">  post  { always { publishReports() }}</text>
+    <text x="42" y="284" font-family="'Courier New', monospace" font-size="9" fill="#3fb950">} // Declarative Pipeline v2.0</text>
+  </g>
+
+  <!-- Security Dashboard -->
+  <g filter="url(#shadow)">
+    <rect x="268" y="195" width="220" height="100" rx="10" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+    <rect x="268" y="195" width="220" height="30" rx="10" ry="10" fill="url(#blueGrad)"/>
+    <rect x="268" y="215" width="220" height="10" fill="url(#blueGrad)"/>
+    <text x="378" y="215" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">📊 Security Dashboard</text>
+    <!-- Metric bars -->
+    <text x="282" y="242" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#8b949e">SAST</text>
+    <rect x="310" y="234" width="90" height="10" rx="3" fill="#21262d"/>
+    <rect x="310" y="234" width="78" height="10" rx="3" fill="#3fb950"/>
+    <text x="405" y="243" font-family="'Courier New', monospace" font-size="8" fill="#3fb950">87%</text>
+    <text x="282" y="258" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#8b949e">DAST</text>
+    <rect x="310" y="250" width="90" height="10" rx="3" fill="#21262d"/>
+    <rect x="310" y="250" width="65" height="10" rx="3" fill="#d29922"/>
+    <text x="405" y="259" font-family="'Courier New', monospace" font-size="8" fill="#d29922">72%</text>
+    <text x="282" y="274" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#8b949e">SCA</text>
+    <rect x="310" y="266" width="90" height="10" rx="3" fill="#21262d"/>
+    <rect x="310" y="266" width="85" height="10" rx="3" fill="#3fb950"/>
+    <text x="405" y="275" font-family="'Courier New', monospace" font-size="8" fill="#3fb950">94%</text>
+    <text x="282" y="289" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#8b949e">Container</text>
+    <rect x="335" y="281" width="65" height="10" rx="3" fill="#21262d"/>
+    <rect x="335" y="281" width="60" height="10" rx="3" fill="#3fb950"/>
+    <text x="405" y="290" font-family="'Courier New', monospace" font-size="8" fill="#3fb950">92%</text>
+  </g>
+
+  <!-- Artifact Repository -->
+  <g filter="url(#shadow)">
+    <rect x="508" y="195" width="220" height="100" rx="10" fill="#161b22" stroke="#bc8cff" stroke-width="1.5"/>
+    <rect x="508" y="195" width="220" height="30" rx="10" ry="10" fill="url(#purpleGrad)"/>
+    <rect x="508" y="215" width="220" height="10" fill="url(#purpleGrad)"/>
+    <text x="618" y="215" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">📦 Artifact Repository</text>
+    <text x="522" y="242" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#8b949e">Container Registry</text>
+    <rect x="522" y="248" width="80" height="14" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+    <text x="562" y="258" font-family="'Courier New', monospace" font-size="7" fill="#58a6ff" text-anchor="middle">registry.hub.io</text>
+    <text x="620" y="242" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#8b949e">SBOM Storage</text>
+    <rect x="620" y="248" width="80" height="14" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+    <text x="660" y="258" font-family="'Courier New', monospace" font-size="7" fill="#58a6ff" text-anchor="middle">sbom/cyclonedx</text>
+    <text x="522" y="280" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#8b949e">Signed Images:</text>
+    <rect x="605" y="272" width="45" height="14" rx="4" fill="#238636"/>
+    <text x="627" y="282" font-family="'Courier New', monospace" font-size="8" fill="#ffffff" text-anchor="middle">COSIGN</text>
+    <text x="660" y="282" font-family="'Courier New', monospace" font-size="9" fill="#3fb950">✓ Verified</text>
+  </g>
+
+  <!-- Infrastructure as Code -->
+  <g filter="url(#shadow)">
+    <rect x="748" y="195" width="220" height="100" rx="10" fill="#161b22" stroke="#d29922" stroke-width="1.5"/>
+    <rect x="748" y="195" width="220" height="30" rx="10" ry="10" fill="url(#yellowGrad)"/>
+    <rect x="748" y="215" width="220" height="10" fill="url(#yellowGrad)"/>
+    <text x="858" y="215" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">🏗️ Infrastructure as Code</text>
+    <text x="762" y="242" font-family="'Courier New', monospace" font-size="9" fill="#8b949e">resource "k8s_deployment" {</text>
+    <text x="762" y="255" font-family="'Courier New', monospace" font-size="9" fill="#58a6ff">  replicas = 3</text>
+    <text x="762" y="268" font-family="'Courier New', monospace" font-size="9" fill="#8b949e">  image = "app:latest"</text>
+    <text x="762" y="281" font-family="'Courier New', monospace" font-size="9" fill="#3fb950">  policy = "zero-trust"</text>
+    <text x="762" y="291" font-family="'Courier New', monospace" font-size="9" fill="#8b949e">}</text>
+  </g>
+
+  <!-- ===== ROW 3: Security Policy & Compliance ===== -->
+
+  <!-- Compliance & Policy Box -->
+  <g filter="url(#shadow)">
+    <rect x="28" y="320" width="350" height="130" rx="10" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
+    <rect x="28" y="320" width="350" height="30" rx="10" ry="10" fill="url(#redGrad)"/>
+    <rect x="28" y="340" width="350" height="10" fill="url(#redGrad)"/>
+    <text x="203" y="340" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">🛡️ Security Policy &amp; Compliance Gates</text>
+
+    <!-- Policy items -->
+    <rect x="42" y="358" width="100" height="36" rx="6" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+    <text x="92" y="373" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#58a6ff" text-anchor="middle">OWASP Top 10</text>
+    <text x="92" y="387" font-family="'Courier New', monospace" font-size="8" fill="#3fb950" text-anchor="middle">✓ Passing</text>
+
+    <rect x="150" y="358" width="100" height="36" rx="6" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+    <text x="200" y="373" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#58a6ff" text-anchor="middle">CIS Benchmarks</text>
+    <text x="200" y="387" font-family="'Courier New', monospace" font-size="8" fill="#3fb950" text-anchor="middle">✓ Compliant</text>
+
+    <rect x="258" y="358" width="100" height="36" rx="6" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+    <text x="308" y="373" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#58a6ff" text-anchor="middle">NIST 800-53</text>
+    <text x="308" y="387" font-family="'Courier New', monospace" font-size="8" fill="#3fb950" text-anchor="middle">✓ Enforced</text>
+
+    <!-- Additional policies -->
+    <rect x="42" y="402" width="155" height="36" rx="6" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+    <text x="119" y="417" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#58a6ff" text-anchor="middle">PCI-DSS / HIPAA / SOC2</text>
+    <text x="119" y="431" font-family="'Courier New', monospace" font-size="8" fill="#d29922" text-anchor="middle">⟳ Continuous Compliance</text>
+
+    <rect x="205" y="402" width="155" height="36" rx="6" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+    <text x="282" y="417" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#58a6ff" text-anchor="middle">Zero Trust Architecture</text>
+    <text x="282" y="431" font-family="'Courier New', monospace" font-size="8" fill="#3fb950" text-anchor="middle">✓ Never Trust, Always Verify</text>
+  </g>
+
+  <!-- Secrets Management -->
+  <g filter="url(#shadow)">
+    <rect x="398" y="320" width="240" height="130" rx="10" fill="#161b22" stroke="#39d2c0" stroke-width="1.5"/>
+    <rect x="398" y="320" width="240" height="30" rx="10" ry="10" fill="url(#cyanGrad)"/>
+    <rect x="398" y="340" width="240" height="10" fill="url(#cyanGrad)"/>
+    <text x="518" y="340" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">🔑 Secrets Management</text>
+
+    <rect x="412" y="358" width="105" height="30" rx="5" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+    <text x="464" y="374" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#39d2c0" text-anchor="middle">HashiCorp Vault</text>
+    <text x="464" y="384" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Dynamic Secrets</text>
+
+    <rect x="523" y="358" width="100" height="30" rx="5" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+    <text x="573" y="374" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#39d2c0" text-anchor="middle">AWS Secrets Mgr</text>
+    <text x="573" y="384" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Encrypted KMS</text>
+
+    <text x="412" y="410" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#8b949e">Rotation Policy:</text>
+    <rect x="412" y="416" width="120" height="12" rx="3" fill="#21262d"/>
+    <rect x="412" y="416" width="100" height="12" rx="3" fill="#3fb950"/>
+    <text x="538" y="425" font-family="'Courier New', monospace" font-size="8" fill="#3fb950">Auto 24h</text>
+
+    <text x="412" y="442" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#8b949e">Access Control:</text>
+    <rect x="494" y="433" width="60" height="14" rx="3" fill="#238636"/>
+    <text x="524" y="443" font-family="'Courier New', monospace" font-size="8" fill="#ffffff" text-anchor="middle">RBAC ✓</text>
+  </g>
+
+  <!-- Observability Stack -->
+  <g filter="url(#shadow)">
+    <rect x="658" y="320" width="520" height="130" rx="10" fill="#161b22" stroke="#f0883e" stroke-width="1.5"/>
+    <rect x="658" y="320" width="520" height="30" rx="10" ry="10" fill="url(#orangeGrad)"/>
+    <rect x="658" y="340" width="520" height="10" fill="url(#orangeGrad)"/>
+    <text x="918" y="340" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">📈 Observability &amp; Alerting Stack</text>
+
+    <!-- Metrics -->
+    <rect x="672" y="358" width="110" height="38" rx="5" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+    <text x="727" y="374" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f0883e" text-anchor="middle">Metrics</text>
+    <text x="727" y="388" font-family="'Courier New', monospace" font-size="8" fill="#8b949e" text-anchor="middle">Prometheus + Grafana</text>
+
+    <!-- Logging -->
+    <rect x="790" y="358" width="110" height="38" rx="5" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+    <text x="845" y="374" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f0883e" text-anchor="middle">Logging</text>
+    <text x="845" y="388" font-family="'Courier New', monospace" font-size="8" fill="#8b949e" text-anchor="middle">ELK Stack + Fluentd</text>
+
+    <!-- Tracing -->
+    <rect x="908" y="358" width="110" height="38" rx="5" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+    <text x="963" y="374" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f0883e" text-anchor="middle">Tracing</text>
+    <text x="963" y="388" font-family="'Courier New', monospace" font-size="8" fill="#8b949e" text-anchor="middle">Jaeger + OpenTelemetry</text>
+
+    <!-- Alerting -->
+    <rect x="1026" y="358" width="130" height="38" rx="5" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+    <text x="1091" y="374" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f85149" text-anchor="middle">🚨 Alerting</text>
+    <text x="1091" y="388" font-family="'Courier New', monospace" font-size="8" fill="#8b949e" text-anchor="middle">PagerDuty + Slack</text>
+
+    <!-- Flow arrows between observability tools -->
+    <line x1="782" y1="377" x2="790" y2="377" stroke="#f0883e" stroke-width="1" marker-end="url(#arrowBlue)" opacity="0.6"/>
+    <line x1="900" y1="377" x2="908" y2="377" stroke="#f0883e" stroke-width="1" marker-end="url(#arrowBlue)" opacity="0.6"/>
+    <line x1="1018" y1="377" x2="1026" y2="377" stroke="#f0883e" stroke-width="1" marker-end="url(#arrowBlue)" opacity="0.6"/>
+
+    <!-- Bottom section: Log aggregation -->
+    <text x="672" y="418" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#8b949e">Log Aggregation:</text>
+    <rect x="768" y="408" width="80" height="14" rx="3" fill="#238636"/>
+    <text x="808" y="418" font-family="'Courier New', monospace" font-size="8" fill="#ffffff" text-anchor="middle">Fluent Bit</text>
+    <text x="860" y="418" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#8b949e">→</text>
+    <rect x="875" y="408" width="50" height="14" rx="3" fill="#238636"/>
+    <text x="900" y="418" font-family="'Courier New', monospace" font-size="8" fill="#ffffff" text-anchor="middle">Kafka</text>
+    <text x="935" y="418" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#8b949e">→</text>
+    <rect x="950" y="408" width="80" height="14" rx="3" fill="#238636"/>
+    <text x="990" y="418" font-family="'Courier New', monospace" font-size="8" fill="#ffffff" text-anchor="middle">Elasticsearch</text>
+
+    <text x="672" y="440" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#8b949e">SLA/SLO Targets:</text>
+    <text x="768" y="440" font-family="'Courier New', monospace" font-size="9" fill="#3fb950">99.9% uptime</text>
+    <text x="870" y="440" font-family="'Courier New', monospace" font-size="9" fill="#d29922">&lt;200ms p99</text>
+    <text x="980" y="440" font-family="'Courier New', monospace" font-size="9" fill="#3fb950">zero vulns</text>
+  </g>
+
+  <!-- ===== ROW 4: Feedback Loop & Environment Info ===== -->
+
+  <!-- Feedback Loop -->
+  <g filter="url(#shadow)">
+    <rect x="28" y="475" width="280" height="105" rx="10" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+    <rect x="28" y="475" width="280" height="28" rx="10" ry="10" fill="url(#greenGrad)"/>
+    <rect x="28" y="493" width="280" height="10" fill="url(#greenGrad)"/>
+    <text x="168" y="494" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">🔄 Feedback Loop</text>
+
+    <!-- Circular flow representation -->
+    <circle cx="100" cy="545" r="28" fill="none" stroke="#30363d" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <circle cx="100" cy="545" r="28" fill="none" stroke="#3fb950" stroke-width="2" stroke-dasharray="44,132" stroke-dashoffset="-30"/>
+    <text x="100" y="541" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#3fb950" text-anchor="middle">Monitor</text>
+    <text x="100" y="552" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#3fb950" text-anchor="middle">→ Detect</text>
+    <text x="100" y="563" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#3fb950" text-anchor="middle">→ Fix</text>
+
+    <text x="150" y="520" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#8b949e">Automated vulnerability</text>
+    <text x="150" y="533" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#8b949e">remediation with:</text>
+    <rect x="150" y="540" width="60" height="16" rx="3" fill="#21262d"/>
+    <text x="180" y="551" font-family="'Courier New', monospace" font-size="8" fill="#58a6ff" text-anchor="middle">Dependabot</text>
+    <rect x="215" y="540" width="50" height="16" rx="3" fill="#21262d"/>
+    <text x="240" y="551" font-family="'Courier New', monospace" font-size="8" fill="#58a6ff" text-anchor="middle">Renovate</text>
+    <rect x="150" y="562" width="70" height="12" rx="3" fill="#238636"/>
+    <text x="185" y="571" font-family="'Courier New', monospace" font-size="7" fill="#ffffff" text-anchor="middle">Auto-Patch ✓</text>
+  </g>
+
+  <!-- Environment Matrix -->
+  <g filter="url(#shadow)">
+    <rect x="328" y="475" width="430" height="105" rx="10" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+    <rect x="328" y="475" width="430" height="28" rx="10" ry="10" fill="url(#blueGrad)"/>
+    <rect x="328" y="493" width="430" height="10" fill="url(#blueGrad)"/>
+    <text x="543" y="494" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">🌍 Multi-Environment Deployment Matrix</text>
+
+    <!-- Environment columns -->
+    <rect x="342" y="510" width="95" height="55" rx="5" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+    <rect x="342" y="510" width="95" height="16" rx="5" ry="5" fill="#238636"/>
+    <rect x="342" y="520" width="95" height="6" fill="#238636"/>
+    <text x="389" y="522" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#ffffff" text-anchor="middle">Development</text>
+    <text x="389" y="538" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">All scans</text>
+    <text x="389" y="550" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Auto-deploy</text>
+    <text x="389" y="562" font-family="'Courier New', monospace" font-size="7" fill="#3fb950" text-anchor="middle">● Active</text>
+
+    <rect x="445" y="510" width="95" height="55" rx="5" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+    <rect x="445" y="510" width="95" height="16" rx="5" ry="5" fill="#d29922"/>
+    <rect x="445" y="520" width="95" height="6" fill="#d29922"/>
+    <text x="492" y="522" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#ffffff" text-anchor="middle">Staging</text>
+    <text x="492" y="538" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Full scan</text>
+    <text x="492" y="550" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Manual gate</text>
+    <text x="492" y="562" font-family="'Courier New', monospace" font-size="7" fill="#d29922" text-anchor="middle">● Review</text>
+
+    <rect x="548" y="510" width="95" height="55" rx="5" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+    <rect x="548" y="510" width="95" height="16" rx="5" ry="5" fill="#1f6feb"/>
+    <rect x="548" y="520" width="95" height="6" fill="#1f6feb"/>
+    <text x="595" y="522" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#ffffff" text-anchor="middle">Pre-Production</text>
+    <text x="595" y="538" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Pen test</text>
+    <text x="595" y="550" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Load test</text>
+    <text x="595" y="562" font-family="'Courier New', monospace" font-size="7" fill="#58a6ff" text-anchor="middle">● Staging</text>
+
+    <rect x="651" y="510" width="95" height="55" rx="5" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+    <rect x="651" y="510" width="95" height="16" rx="5" ry="5" fill="#f85149"/>
+    <rect x="651" y="520" width="95" height="6" fill="#f85149"/>
+    <text x="698" y="522" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#ffffff" text-anchor="middle">Production</text>
+    <text x="698" y="538" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Blue/Green</text>
+    <text x="698" y="550" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Canary deploy</text>
+    <text x="698" y="562" font-family="'Courier New', monospace" font-size="7" fill="#3fb950" text-anchor="middle">● Live</text>
+
+    <!-- Arrows between envs -->
+    <text x="439" y="542" fill="#58a6ff" font-size="12">→</text>
+    <text x="542" y="542" fill="#58a6ff" font-size="12">→</text>
+    <text x="645" y="542" fill="#58a6ff" font-size="12">→</text>
+  </g>
+
+  <!-- Author Credit -->
+  <g filter="url(#shadow)">
+    <rect x="778" y="475" width="400" height="105" rx="10" fill="#161b22" stroke="#bc8cff" stroke-width="1.5"/>
+    <rect x="778" y="475" width="400" height="28" rx="10" ry="10" fill="url(#purpleGrad)"/>
+    <rect x="778" y="493" width="400" height="10" fill="url(#purpleGrad)"/>
+    <text x="978" y="494" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">⚡ Pipeline Performance Metrics</text>
+
+    <text x="792" y="520" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#8b949e">Build Time:</text>
+    <rect x="862" y="510" width="120" height="14" rx="3" fill="#21262d"/>
+    <rect x="862" y="510" width="80" height="14" rx="3" fill="#3fb950"/>
+    <text x="988" y="520" font-family="'Courier New', monospace" font-size="8" fill="#3fb950">4m 32s avg</text>
+
+    <text x="792" y="540" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#8b949e">Deploy Freq:</text>
+    <rect x="862" y="530" width="120" height="14" rx="3" fill="#21262d"/>
+    <rect x="862" y="530" width="108" height="14" rx="3" fill="#58a6ff"/>
+    <text x="988" y="540" font-family="'Courier New', monospace" font-size="8" fill="#58a6ff">50x/day</text>
+
+    <text x="792" y="560" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#8b949e">MTTR:</text>
+    <rect x="862" y="550" width="120" height="14" rx="3" fill="#21262d"/>
+    <rect x="862" y="550" width="95" height="14" rx="3" fill="#3fb950"/>
+    <text x="988" y="560" font-family="'Courier New', monospace" font-size="8" fill="#3fb950">&lt;15 min</text>
+
+    <text x="792" y="574" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#8b949e">Security Score:</text>
+    <rect x="1022" y="564" width="45" height="14" rx="3" fill="#238636"/>
+    <text x="1044" y="574" font-family="'Courier New', monospace" font-size="8" fill="#ffffff" text-anchor="middle">A+</text>
+  </g>
+</svg>

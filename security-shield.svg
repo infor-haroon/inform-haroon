@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <!-- Shield gradient -->
+    <linearGradient id="shield-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#58a6ff"/>
+      <stop offset="50%"  stop-color="#bc8cff"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+
+    <!-- Lock gradient -->
+    <linearGradient id="lock-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#d0d7de"/>
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="0 0 0 0 0.345
+                0 0 0 0 0.651
+                0 0 0 0 1.0
+                0 0 0 0.5 0" result="colorBlur"/>
+      <feMerge>
+        <feMergeNode in="colorBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Outer pulse glow -->
+    <filter id="pulse-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="0 0 0 0 0.345
+                0 0 0 0 0.651
+                0 0 0 0 1.0
+                0 0 0 0.6 0"/>
+    </filter>
+  </defs>
+
+  <!-- Outer pulse ring -->
+  <path
+    d="M 100 18 L 164 52 L 164 112 Q 164 172 100 188 Q 36 172 36 112 L 36 52 Z"
+    fill="none"
+    stroke="#58a6ff"
+    stroke-width="2"
+    filter="url(#pulse-glow)"
+  >
+    <animate
+      attributeName="opacity"
+      values="0;0.6;0"
+      dur="2.5s"
+      repeatCount="indefinite"
+    />
+    <animateTransform
+      attributeName="transform"
+      type="scale"
+      values="1;1.08;1.15"
+      dur="2.5s"
+      repeatCount="indefinite"
+      additive="sum"
+    />
+  </path>
+
+  <!-- Main shield body -->
+  <path
+    d="M 100 18 L 164 52 L 164 112 Q 164 172 100 188 Q 36 172 36 112 L 36 52 Z"
+    fill="url(#shield-grad)"
+    stroke="url(#shield-grad)"
+    stroke-width="1.5"
+    filter="url(#glow)"
+  >
+    <!-- Subtle scale pulse -->
+    <animateTransform
+      attributeName="transform"
+      type="scale"
+      values="1;1.02;1"
+      dur="3s"
+      repeatCount="indefinite"
+      additive="sum"
+    />
+  </path>
+
+  <!-- Shield highlight (top-left shine) -->
+  <path
+    d="M 100 22 L 58 46 L 58 108 Q 60 130 80 150 L 100 162 L 100 22 Z"
+    fill="white"
+    opacity="0.1"
+  />
+
+  <!-- Lock shackle -->
+  <rect x="82" y="80" width="36" height="28" rx="4" fill="url(#lock-grad)" opacity="0.95"/>
+  <path
+    d="M 88 80 L 88 68 Q 88 52 100 52 Q 112 52 112 68 L 112 80"
+    fill="none"
+    stroke="url(#lock-grad)"
+    stroke-width="5"
+    stroke-linecap="round"
+    opacity="0.95"
+  />
+
+  <!-- Keyhole -->
+  <circle cx="100" cy="91" r="5" fill="#58a6ff"/>
+  <path d="M 97 95 L 100 106 L 103 95 Z" fill="#58a6ff"/>
+
+  <!-- Sparkle accents -->
+  <circle cx="55" cy="80" r="2" fill="#ffffff" opacity="0">
+    <animate attributeName="opacity" values="0;0.8;0" dur="2s" begin="0s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="148" cy="90" r="1.5" fill="#ffffff" opacity="0">
+    <animate attributeName="opacity" values="0;0.7;0" dur="2s" begin="0.7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="100" cy="170" r="1.5" fill="#ffffff" opacity="0">
+    <animate attributeName="opacity" values="0;0.6;0" dur="2s" begin="1.4s" repeatCount="indefinite"/>
+  </circle>
+</svg>

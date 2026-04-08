@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <linearGradient id="nsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+    <linearGradient id="nsBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#58a6ff"/>
+      <stop offset="100%" style="stop-color:#1f6feb"/>
+    </linearGradient>
+    <linearGradient id="nsGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3fb950"/>
+      <stop offset="100%" style="stop-color:#238636"/>
+    </linearGradient>
+    <linearGradient id="nsRed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f85149"/>
+      <stop offset="100%" style="stop-color:#da3633"/>
+    </linearGradient>
+    <linearGradient id="nsOrange" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0883e"/>
+      <stop offset="100%" style="stop-color:#d18616"/>
+    </linearGradient>
+    <linearGradient id="nsPurple" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#bc8cff"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="nsCyan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#39d2c0"/>
+      <stop offset="100%" style="stop-color:#1a9e8f"/>
+    </linearGradient>
+    <linearGradient id="nsYellow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d29922"/>
+      <stop offset="100%" style="stop-color:#9e6a03"/>
+    </linearGradient>
+    <linearGradient id="nsPink" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f778ba"/>
+      <stop offset="100%" style="stop-color:#db2777"/>
+    </linearGradient>
+    <filter id="nsShadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <filter id="nsGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="nsArrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7 L2,3.5 Z" fill="#58a6ff"/>
+    </marker>
+    <marker id="nsArrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7 L2,3.5 Z" fill="#3fb950"/>
+    </marker>
+    <marker id="nsArrowRed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7 L2,3.5 Z" fill="#f85149"/>
+    </marker>
+    <marker id="nsArrowOrange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7 L2,3.5 Z" fill="#f0883e"/>
+    </marker>
+    <marker id="nsArrowPurple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7 L2,3.5 Z" fill="#bc8cff"/>
+    </marker>
+    <pattern id="nsGrid" width="25" height="25" patternUnits="userSpaceOnUse">
+      <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#21262d" stroke-width="0.4" opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="750" fill="url(#nsBg)" rx="12"/>
+  <rect width="1200" height="750" fill="url(#nsGrid)" rx="12"/>
+  <rect x="1" y="1" width="1198" height="748" fill="none" stroke="#30363d" stroke-width="2" rx="12"/>
+
+  <!-- Title Bar -->
+  <rect x="0" y="0" width="1200" height="50" fill="#0d1117" rx="12" ry="12"/>
+  <rect x="0" y="28" width="1200" height="22" fill="#0d1117"/>
+  <line x1="0" y1="50" x2="1200" y2="50" stroke="#30363d" stroke-width="1.5"/>
+  <circle cx="24" cy="25" r="7" fill="#f85149"/>
+  <circle cx="46" cy="25" r="7" fill="#d29922"/>
+  <circle cx="68" cy="25" r="7" fill="#3fb950"/>
+  <text x="600" y="32" font-family="'Courier New', monospace" font-size="14" fill="#c9d1d9" text-anchor="middle" font-weight="bold">🌐 Network Security &amp; Monitoring Architecture — Defense-in-Depth</text>
+
+  <!-- ===== ZONE 1: Internet ===== -->
+  <g filter="url(#nsShadow)">
+    <rect x="20" y="65" width="1160" height="85" rx="10" fill="#161b22" stroke="#f85149" stroke-width="2" stroke-dasharray="8,4"/>
+    <rect x="20" y="65" width="1160" height="24" rx="10" ry="10" fill="url(#nsRed)"/>
+    <rect x="20" y="81" width="1160" height="8" fill="url(#nsRed)"/>
+    <text x="600" y="82" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">🌍 UNTRUSTED ZONE — Internet / External Networks</text>
+
+    <!-- Internet Sources -->
+    <rect x="35" y="98" width="130" height="40" rx="5" fill="#0d1117" stroke="#f85149" stroke-width="1"/>
+    <text x="100" y="113" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f87171" text-anchor="middle">External Users</text>
+    <text x="100" y="127" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Web/Mobile/API Clients</text>
+
+    <rect x="175" y="98" width="130" height="40" rx="5" fill="#0d1117" stroke="#f85149" stroke-width="1"/>
+    <text x="240" y="113" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f87171" text-anchor="middle">Threat Actors</text>
+    <text x="240" y="127" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">DDoS • Brute Force • APT</text>
+
+    <rect x="315" y="98" width="130" height="40" rx="5" fill="#0d1117" stroke="#f85149" stroke-width="1"/>
+    <text x="380" y="113" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f87171" text-anchor="middle">Third-Party APIs</text>
+    <text x="380" y="127" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Partners • SaaS • Cloud</text>
+
+    <rect x="455" y="98" width="130" height="40" rx="5" fill="#0d1117" stroke="#f85149" stroke-width="1"/>
+    <text x="520" y="113" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f87171" text-anchor="middle">DNS Services</text>
+    <text x="520" y="127" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Route53 + Cloudflare</text>
+
+    <!-- CDN/WAF -->
+    <rect x="600" y="98" width="200" height="40" rx="5" fill="#0d1117" stroke="#f0883e" stroke-width="1.5"/>
+    <text x="700" y="113" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f0883e" text-anchor="middle">Cloudflare + Akamai (CDN/WAF)</text>
+    <text x="700" y="127" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">DDoS protection • Bot management • Rate limiting</text>
+
+    <!-- Edge Firewall -->
+    <rect x="810" y="98" width="170" height="40" rx="5" fill="#0d1117" stroke="#f0883e" stroke-width="1.5"/>
+    <text x="895" y="113" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f0883e" text-anchor="middle">Edge Firewall (Perimeter)</text>
+    <text x="895" y="127" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Palo Alto PA-5260 • L3/L4 filtering</text>
+
+    <!-- DDoS Protection -->
+    <rect x="990" y="98" width="175" height="40" rx="5" fill="#0d1117" stroke="#f85149" stroke-width="1.5"/>
+    <text x="1077" y="113" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f85149" text-anchor="middle">🛡️ DDoS Mitigation</text>
+    <text x="1077" y="127" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Arbor • Cloudflare Magic • Rate limit</text>
+  </g>
+
+  <!-- Arrow Internet → DMZ -->
+  <line x1="600" y1="150" x2="600" y2="165" stroke="#f85149" stroke-width="2.5" marker-end="url(#nsArrowRed)"/>
+  <text x="615" y="162" font-family="'Courier New', monospace" font-size="7" fill="#f85149">▼ Filtered Traffic</text>
+
+  <!-- ===== ZONE 2: DMZ ===== -->
+  <g filter="url(#nsShadow)">
+    <rect x="20" y="170" width="1160" height="90" rx="10" fill="#161b22" stroke="#f0883e" stroke-width="2"/>
+    <rect x="20" y="170" width="1160" height="24" rx="10" ry="10" fill="url(#nsOrange)"/>
+    <rect x="20" y="186" width="1160" height="8" fill="url(#nsOrange)"/>
+    <text x="600" y="187" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">🔒 DMZ — Demilitarized Zone (Semi-Trusted)</text>
+
+    <!-- DMZ Components -->
+    <rect x="35" y="202" width="165" height="45" rx="6" fill="#0d1117" stroke="#f0883e" stroke-width="1"/>
+    <text x="117" y="217" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f0883e" text-anchor="middle">Web Application Firewall</text>
+    <text x="117" y="230" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">ModSecurity + AWS WAF</text>
+    <text x="117" y="241" font-family="'Courier New', monospace" font-size="7" fill="#3fb950" text-anchor="middle">OWASP CRS rules ✓</text>
+
+    <rect x="210" y="202" width="165" height="45" rx="6" fill="#0d1117" stroke="#f0883e" stroke-width="1"/>
+    <text x="292" y="217" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f0883e" text-anchor="middle">Reverse Proxy / LB</text>
+    <text x="292" y="230" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">HAProxy + Nginx</text>
+    <text x="292" y="241" font-family="'Courier New', monospace" font-size="7" fill="#3fb950" text-anchor="middle">TLS 1.3 termination ✓</text>
+
+    <rect x="385" y="202" width="165" height="45" rx="6" fill="#0d1117" stroke="#f0883e" stroke-width="1"/>
+    <text x="467" y="217" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f0883e" text-anchor="middle">Mail Gateway</text>
+    <text x="467" y="230" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Proofpoint + Mimecast</text>
+    <text x="467" y="241" font-family="'Courier New', monospace" font-size="7" fill="#3fb950" text-anchor="middle">SPF/DKIM/DMARC ✓</text>
+
+    <rect x="560" y="202" width="165" height="45" rx="6" fill="#0d1117" stroke="#f0883e" stroke-width="1"/>
+    <text x="642" y="217" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f0883e" text-anchor="middle">VPN Gateway</text>
+    <text x="642" y="230" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">WireGuard + IPsec</text>
+    <text x="642" y="241" font-family="'Courier New', monospace" font-size="7" fill="#3fb950" text-anchor="middle">MFA + cert auth ✓</text>
+
+    <rect x="735" y="202" width="165" height="45" rx="6" fill="#0d1117" stroke="#f0883e" stroke-width="1"/>
+    <text x="817" y="217" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f0883e" text-anchor="middle">Bastion Host / Jump</text>
+    <text x="817" y="230" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Teleport + Boundary</text>
+    <text x="817" y="241" font-family="'Courier New', monospace" font-size="7" fill="#3fb950" text-anchor="middle">Session recording ✓</text>
+
+    <!-- IDS in DMZ -->
+    <rect x="910" y="202" width="255" height="45" rx="6" fill="#0d1117" stroke="#f85149" stroke-width="1.5"/>
+    <text x="1037" y="217" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f85149" text-anchor="middle" font-weight="bold">🚨 IDS/IPS — DMZ Boundary</text>
+    <text x="1037" y="230" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Suricata + Snort 3.0 | Inline IPS mode | Auto-block</text>
+    <text x="1037" y="241" font-family="'Courier New', monospace" font-size="7" fill="#3fb950" text-anchor="middle">Rules: 45,000+ | Updates: Daily | ET Pro ✓</text>
+  </g>
+
+  <!-- Arrow DMZ → Internal -->
+  <line x1="600" y1="260" x2="600" y2="275" stroke="#f0883e" stroke-width="2.5" marker-end="url(#nsArrowOrange)"/>
+  <text x="615" y="272" font-family="'Courier New', monospace" font-size="7" fill="#f0883e">▼ Authenticated Traffic</text>
+
+  <!-- ===== ZONE 3: Internal Network ===== -->
+  <g filter="url(#nsShadow)">
+    <rect x="20" y="280" width="1160" height="120" rx="10" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
+    <rect x="20" y="280" width="1160" height="24" rx="10" ry="10" fill="url(#nsBlue)"/>
+    <rect x="20" y="296" width="1160" height="8" fill="url(#nsBlue)"/>
+    <text x="600" y="297" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">🏢 INTERNAL NETWORK — Corporate / Production Zone</text>
+
+    <!-- Internal Segments -->
+    <rect x="35" y="312" width="145" height="38" rx="5" fill="#0d1117" stroke="#58a6ff" stroke-width="1"/>
+    <text x="107" y="326" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#58a6ff" text-anchor="middle">Core Switch</text>
+    <text x="107" y="340" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Cisco Nexus 9300</text>
+
+    <rect x="188" y="312" width="145" height="38" rx="5" fill="#0d1117" stroke="#58a6ff" stroke-width="1"/>
+    <text x="260" y="326" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#58a6ff" text-anchor="middle">VLAN Segmentation</text>
+    <text x="260" y="340" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">24 VLANs • Micro-seg</text>
+
+    <rect x="341" y="312" width="145" height="38" rx="5" fill="#0d1117" stroke="#58a6ff" stroke-width="1"/>
+    <text x="413" y="326" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#58a6ff" text-anchor="middle">NAC (Access Control)</text>
+    <text x="413" y="340" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">ISE + 802.1X</text>
+
+    <rect x="494" y="312" width="145" height="38" rx="5" fill="#0d1117" stroke="#58a6ff" stroke-width="1"/>
+    <text x="566" y="326" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#58a6ff" text-anchor="middle">DNS / DHCP</text>
+    <text x="566" y="340" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Infoblox • DNSSEC</text>
+
+    <rect x="647" y="312" width="145" height="38" rx="5" fill="#0d1117" stroke="#58a6ff" stroke-width="1"/>
+    <text x="719" y="326" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#58a6ff" text-anchor="middle">AD / LDAP</text>
+    <text x="719" y="340" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Active Directory + MFA</text>
+
+    <rect x="800" y="312" width="145" height="38" rx="5" fill="#0d1117" stroke="#58a6ff" stroke-width="1"/>
+    <text x="872" y="326" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#58a6ff" text-anchor="middle">Internal FW</text>
+    <text x="872" y="340" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Fortinet 3600E</text>
+
+    <rect x="953" y="312" width="210" height="38" rx="5" fill="#0d1117" stroke="#f85149" stroke-width="1.5"/>
+    <text x="1058" y="326" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f85149" text-anchor="middle" font-weight="bold">🚨 Internal IDS/IPS + EDR</text>
+    <text x="1058" y="340" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">CrowdStrike + Defender | Endpoint + Network</text>
+
+    <!-- Second row of internal components -->
+    <rect x="35" y="358" width="200" height="32" rx="5" fill="#0d1117" stroke="#3fb950" stroke-width="1"/>
+    <text x="135" y="372" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#3fb950" text-anchor="middle">🖥️ Workstations (500+)</text>
+    <text x="135" y="384" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">CrowdStrike Falcon • Bitlocker • GPO enforced</text>
+
+    <rect x="245" y="358" width="200" height="32" rx="5" fill="#0d1117" stroke="#3fb950" stroke-width="1"/>
+    <text x="345" y="372" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#3fb950" text-anchor="middle">📦 Application Servers</text>
+    <text x="345" y="384" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">K8s pods • VMs • Bare-metal • Hardenened</text>
+
+    <rect x="455" y="358" width="200" height="32" rx="5" fill="#0d1117" stroke="#3fb950" stroke-width="1"/>
+    <text x="555" y="372" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#3fb950" text-anchor="middle">🗄️ Database Servers</text>
+    <text x="555" y="384" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">PostgreSQL + MongoDB • Encrypted • HA</text>
+
+    <rect x="665" y="358" width="200" height="32" rx="5" fill="#0d1117" stroke="#3fb950" stroke-width="1"/>
+    <text x="765" y="372" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#3fb950" text-anchor="middle">📁 File / Storage Servers</text>
+    <text x="765" y="384" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">NFS + S3 • ACL enforced • DLP enabled</text>
+
+    <rect x="875" y="358" width="288" height="32" rx="5" fill="#0d1117" stroke="#bc8cff" stroke-width="1"/>
+    <text x="1019" y="372" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#bc8cff" text-anchor="middle">📊 Log Forwarding (All Devices → SIEM)</text>
+    <text x="1019" y="384" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Fluentd → Kafka → Logstash → Elasticsearch | 50K EPS</text>
+  </g>
+
+  <!-- Arrow Internal → Restricted -->
+  <line x1="300" y1="400" x2="300" y2="415" stroke="#58a6ff" stroke-width="2" marker-end="url(#nsArrow)"/>
+  <!-- Arrow Internal → OT -->
+  <line x1="900" y1="400" x2="900" y2="415" stroke="#bc8cff" stroke-width="2" marker-end="url(#nsArrowPurple)"/>
+
+  <!-- ===== ZONE 4: Restricted Zone ===== -->
+  <g filter="url(#nsShadow)">
+    <rect x="20" y="420" width="560" height="105" rx="10" fill="#161b22" stroke="#d29922" stroke-width="2"/>
+    <rect x="20" y="420" width="560" height="24" rx="10" ry="10" fill="url(#nsYellow)"/>
+    <rect x="20" y="436" width="560" height="8" fill="url(#nsYellow)"/>
+    <text x="300" y="437" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#0d1117" text-anchor="middle" font-weight="bold">🔐 RESTRICTED ZONE — PCI / PII / Compliance Data</text>
+
+    <rect x="35" y="452" width="165" height="60" rx="5" fill="#0d1117" stroke="#d29922" stroke-width="1"/>
+    <text x="117" y="467" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#d29922" text-anchor="middle">Payment Systems</text>
+    <text x="117" y="480" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">PCI-DSS compliant</text>
+    <text x="117" y="492" font-family="'Courier New', monospace" font-size="7" fill="#3fb950" text-anchor="middle">Tokenization ✓</text>
+    <text x="117" y="504" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">HSM key mgmt</text>
+
+    <rect x="208" y="452" width="165" height="60" rx="5" fill="#0d1117" stroke="#d29922" stroke-width="1"/>
+    <text x="290" y="467" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#d29922" text-anchor="middle">PII Database</text>
+    <text x="290" y="480" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">GDPR compliant</text>
+    <text x="290" y="492" font-family="'Courier New', monospace" font-size="7" fill="#3fb950" text-anchor="middle">Encryption at rest ✓</text>
+    <text x="290" y="504" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Data masking active</text>
+
+    <rect x="381" y="452" width="185" height="60" rx="5" fill="#0d1117" stroke="#d29922" stroke-width="1"/>
+    <text x="473" y="467" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#d29922" text-anchor="middle">Key Management (HSM)</text>
+    <text x="473" y="480" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">AWS KMS + Azure Key Vault</text>
+    <text x="473" y="492" font-family="'Courier New', monospace" font-size="7" fill="#3fb950" text-anchor="middle">FIPS 140-2 Level 3 ✓</text>
+    <text x="473" y="504" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Auto-rotation: 90 days</text>
+
+    <!-- Restricted IDS -->
+    <rect x="35" y="517" width="530" height="5" rx="2" fill="#d29922" opacity="0.4"/>
+  </g>
+
+  <!-- ===== ZONE 5: OT Network ===== -->
+  <g filter="url(#nsShadow)">
+    <rect x="595" y="420" width="585" height="105" rx="10" fill="#161b22" stroke="#bc8cff" stroke-width="2"/>
+    <rect x="595" y="420" width="585" height="24" rx="10" ry="10" fill="url(#nsPurple)"/>
+    <rect x="595" y="436" width="585" height="8" fill="url(#nsPurple)"/>
+    <text x="887" y="437" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">🏭 OT NETWORK — Operational Technology / ICS</text>
+
+    <rect x="610" y="452" width="165" height="60" rx="5" fill="#0d1117" stroke="#bc8cff" stroke-width="1"/>
+    <text x="692" y="467" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#bc8cff" text-anchor="middle">SCADA Systems</text>
+    <text x="692" y="480" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Ignition v8.1</text>
+    <text x="692" y="492" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Modbus/OPC-UA</text>
+    <text x="692" y="504" font-family="'Courier New', monospace" font-size="7" fill="#3fb950" text-anchor="middle">Air-gapped ✓</text>
+
+    <rect x="783" y="452" width="165" height="60" rx="5" fill="#0d1117" stroke="#bc8cff" stroke-width="1"/>
+    <text x="865" y="467" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#bc8cff" text-anchor="middle">PLCs / RTUs</text>
+    <text x="865" y="480" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Siemens S7 + AB</text>
+    <text x="865" y="492" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">DNP3 / PROFINET</text>
+    <text x="865" y="504" font-family="'Courier New', monospace" font-size="7" fill="#3fb950" text-anchor="middle">Logic signed ✓</text>
+
+    <rect x="956" y="452" width="210" height="60" rx="5" fill="#0d1117" stroke="#f85149" stroke-width="1.5"/>
+    <text x="1061" y="467" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f85149" text-anchor="middle" font-weight="bold">🚨 OT IDS / Claroty / Nozomi</text>
+    <text x="1061" y="480" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Deep packet inspection</text>
+    <text x="1061" y="492" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Protocol anomaly detect</text>
+    <text x="1061" y="504" font-family="'Courier New', monospace" font-size="7" fill="#3fb950" text-anchor="middle">Asset discovery: 100% ✓</text>
+
+    <!-- OT IDS line -->
+    <rect x="610" y="517" width="555" height="5" rx="2" fill="#bc8cff" opacity="0.4"/>
+  </g>
+
+  <!-- ===== BOTTOM: Monitoring Stack ===== -->
+  <g filter="url(#nsShadow)">
+    <rect x="20" y="535" width="1160" height="100" rx="10" fill="#161b22" stroke="#39d2c0" stroke-width="2"/>
+    <rect x="20" y="535" width="1160" height="24" rx="10" ry="10" fill="url(#nsCyan)"/>
+    <rect x="20" y="551" width="1160" height="8" fill="url(#nsCyan)"/>
+    <text x="600" y="552" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">📊 MONITORING STACK — Full Observability</text>
+
+    <!-- Monitoring Tools -->
+    <rect x="35" y="567" width="140" height="55" rx="5" fill="#0d1117" stroke="#39d2c0" stroke-width="1"/>
+    <text x="105" y="582" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#39d2c0" text-anchor="middle">Grafana</text>
+    <text x="105" y="595" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Dashboards (200+)</text>
+    <text x="105" y="607" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Real-time viz</text>
+    <text x="105" y="618" font-family="'Courier New', monospace" font-size="7" fill="#3fb950" text-anchor="middle">v10.2 ✓</text>
+
+    <rect x="183" y="567" width="140" height="55" rx="5" fill="#0d1117" stroke="#39d2c0" stroke-width="1"/>
+    <text x="253" y="582" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#39d2c0" text-anchor="middle">Prometheus</text>
+    <text x="253" y="595" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Metrics collection</text>
+    <text x="253" y="607" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">15M time series</text>
+    <text x="253" y="618" font-family="'Courier New', monospace" font-size="7" fill="#3fb950" text-anchor="middle">Thanos LTM ✓</text>
+
+    <rect x="331" y="567" width="140" height="55" rx="5" fill="#0d1117" stroke="#39d2c0" stroke-width="1"/>
+    <text x="401" y="582" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#39d2c0" text-anchor="middle">Nagios / Zabbix</text>
+    <text x="401" y="595" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Infrastructure monitor</text>
+    <text x="401" y="607" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">2,500+ hosts</text>
+    <text x="401" y="618" font-family="'Courier New', monospace" font-size="7" fill="#3fb950" text-anchor="middle">99.99% uptime ✓</text>
+
+    <rect x="479" y="567" width="140" height="55" rx="5" fill="#0d1117" stroke="#39d2c0" stroke-width="1"/>
+    <text x="549" y="582" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#39d2c0" text-anchor="middle">ELK Stack</text>
+    <text x="549" y="595" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Elastic + Logstash</text>
+    <text x="549" y="607" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">+ Kibana</text>
+    <text x="549" y="618" font-family="'Courier New', monospace" font-size="7" fill="#3fb950" text-anchor="middle">50TB indexed ✓</text>
+
+    <rect x="627" y="567" width="140" height="55" rx="5" fill="#0d1117" stroke="#f85149" stroke-width="1.5"/>
+    <text x="697" y="582" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f85149" text-anchor="middle" font-weight="bold">Wazuh</text>
+    <text x="697" y="595" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">SIEM + XDR + FIM</text>
+    <text x="697" y="607" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Vulnerability detect</text>
+    <text x="697" y="618" font-family="'Courier New', monospace" font-size="7" fill="#3fb950" text-anchor="middle">5,000+ agents ✓</text>
+
+    <rect x="775" y="567" width="140" height="55" rx="5" fill="#0d1117" stroke="#39d2c0" stroke-width="1"/>
+    <text x="845" y="582" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#39d2c0" text-anchor="middle">Jaeger / Tempo</text>
+    <text x="845" y="595" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Distributed tracing</text>
+    <text x="845" y="607" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">OpenTelemetry</text>
+    <text x="845" y="618" font-family="'Courier New', monospace" font-size="7" fill="#3fb950" text-anchor="middle">p99 &lt;50ms ✓</text>
+
+    <rect x="923" y="567" width="245" height="55" rx="5" fill="#0d1117" stroke="#39d2c0" stroke-width="1"/>
+    <text x="1045" y="582" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#39d2c0" text-anchor="middle">Uptime / Synthetic Monitoring</text>
+    <text x="1045" y="595" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Pingdom + Datadog Synthetics</text>
+    <text x="1045" y="607" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">API health checks every 30s</text>
+    <text x="1045" y="618" font-family="'Courier New', monospace" font-size="7" fill="#3fb950" text-anchor="middle">45 endpoints monitored ✓</text>
+  </g>
+
+  <!-- ===== BOTTOM: Alert Workflow ===== -->
+  <g filter="url(#nsShadow)">
+    <rect x="20" y="645" width="1160" height="90" rx="10" fill="#161b22" stroke="#f85149" stroke-width="2"/>
+    <rect x="20" y="645" width="1160" height="24" rx="10" ry="10" fill="url(#nsRed)"/>
+    <rect x="20" y="661" width="1160" height="8" fill="url(#nsRed)"/>
+    <text x="600" y="662" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">🚨 ALERT WORKFLOW — Detection → Correlation → Response</text>
+
+    <!-- Alert Flow Steps -->
+    <rect x="35" y="677" width="120" height="44" rx="6" fill="#0d1117" stroke="#58a6ff" stroke-width="1.5"/>
+    <text x="95" y="694" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#58a6ff" text-anchor="middle">Log Sources</text>
+    <text x="95" y="706" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">All devices/hosts</text>
+    <text x="95" y="716" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">50K EPS ingest</text>
+
+    <!-- Arrow -->
+    <line x1="155" y1="699" x2="173" y2="699" stroke="#58a6ff" stroke-width="2" marker-end="url(#nsArrow)"/>
+
+    <rect x="177" y="677" width="120" height="44" rx="6" fill="#0d1117" stroke="#bc8cff" stroke-width="1.5"/>
+    <text x="237" y="694" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#bc8cff" text-anchor="middle">SIEM Correlation</text>
+    <text x="237" y="706" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Splunk + Wazuh</text>
+    <text x="237" y="716" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">2,500 rules active</text>
+
+    <!-- Arrow -->
+    <line x1="297" y1="699" x2="315" y2="699" stroke="#bc8cff" stroke-width="2" marker-end="url(#nsArrowPurple)"/>
+
+    <rect x="319" y="677" width="120" height="44" rx="6" fill="#0d1117" stroke="#f0883e" stroke-width="1.5"/>
+    <text x="379" y="694" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f0883e" text-anchor="middle">Threat Intel</text>
+    <text x="379" y="706" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">MISP + OTX feeds</text>
+    <text x="379" y="716" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">IOC enrichment</text>
+
+    <!-- Arrow -->
+    <line x1="439" y1="699" x2="457" y2="699" stroke="#f0883e" stroke-width="2" marker-end="url(#nsArrowOrange)"/>
+
+    <rect x="461" y="677" width="120" height="44" rx="6" fill="#0d1117" stroke="#f85149" stroke-width="1.5"/>
+    <text x="521" y="694" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f85149" text-anchor="middle">Alert Triage</text>
+    <text x="521" y="706" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Severity scoring</text>
+    <text x="521" y="716" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">ML-based priority</text>
+
+    <!-- Arrow -->
+    <line x1="581" y1="699" x2="599" y2="699" stroke="#f85149" stroke-width="2" marker-end="url(#nsArrowRed)"/>
+
+    <rect x="603" y="677" width="120" height="44" rx="6" fill="#0d1117" stroke="#ec4899" stroke-width="1.5"/>
+    <text x="663" y="694" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#ec4899" text-anchor="middle">SOAR Automation</text>
+    <text x="663" y="706" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Splunk SOAR</text>
+    <text x="663" y="716" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">85+ playbooks</text>
+
+    <!-- Arrow -->
+    <line x1="723" y1="699" x2="741" y2="699" stroke="#ec4899" stroke-width="2" marker-end="url(#nsArrowRed)"/>
+
+    <rect x="745" y="677" width="120" height="44" rx="6" fill="#0d1117" stroke="#3fb950" stroke-width="1.5"/>
+    <text x="805" y="694" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#3fb950" text-anchor="middle">Auto Response</text>
+    <text x="805" y="706" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Block/isolate/patch</text>
+    <text x="805" y="716" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">68% auto-resolved</text>
+
+    <!-- Arrow -->
+    <line x1="865" y1="699" x2="883" y2="699" stroke="#3fb950" stroke-width="2" marker-end="url(#nsArrowGreen)"/>
+
+    <rect x="887" y="677" width="120" height="44" rx="6" fill="#0d1117" stroke="#d29922" stroke-width="1.5"/>
+    <text x="947" y="694" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#d29922" text-anchor="middle">Escalation</text>
+    <text x="947" y="706" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">PagerDuty + Slack</text>
+    <text x="947" y="716" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">On-call rotation</text>
+
+    <!-- Arrow -->
+    <line x1="1007" y1="699" x2="1025" y2="699" stroke="#d29922" stroke-width="2" marker-end="url(#nsArrow)"/>
+
+    <rect x="1029" y="677" width="135" height="44" rx="6" fill="#0d1117" stroke="#3fb950" stroke-width="1.5"/>
+    <text x="1096" y="694" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#3fb950" text-anchor="middle">✅ Resolution</text>
+    <text x="1096" y="706" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Ticket close + report</text>
+    <text x="1096" y="716" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Lessons learned</text>
+  </g>
+</svg>

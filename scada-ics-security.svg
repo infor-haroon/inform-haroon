@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+  <defs>
+    <linearGradient id="icsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628"/>
+      <stop offset="100%" style="stop-color:#1a2744"/>
+    </linearGradient>
+    <linearGradient id="steelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d4a6f"/>
+      <stop offset="100%" style="stop-color:#1b3252"/>
+    </linearGradient>
+    <linearGradient id="fieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3d6b8f"/>
+      <stop offset="100%" style="stop-color:#2a4d6d"/>
+    </linearGradient>
+    <linearGradient id="scadaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8720c"/>
+      <stop offset="100%" style="stop-color:#c45d00"/>
+    </linearGradient>
+    <linearGradient id="entGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="alertRed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#dc2626"/>
+    </linearGradient>
+    <linearGradient id="alertYellow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+    <linearGradient id="safeGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <linearGradient id="dmzGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+    <filter id="icsShadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="icsGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="icsArrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7 L2,3.5 Z" fill="#f59e0b"/>
+    </marker>
+    <marker id="icsArrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7 L2,3.5 Z" fill="#10b981"/>
+    </marker>
+    <marker id="icsArrowRed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7 L2,3.5 Z" fill="#ef4444"/>
+    </marker>
+    <marker id="icsArrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7 L2,3.5 Z" fill="#60a5fa"/>
+    </marker>
+    <pattern id="icsGrid" width="25" height="25" patternUnits="userSpaceOnUse">
+      <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#1e3a5f" stroke-width="0.4" opacity="0.4"/>
+    </pattern>
+    <pattern id="hazardPattern" width="20" height="20" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="10" height="20" fill="#f59e0b" opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="700" fill="url(#icsBg)" rx="12"/>
+  <rect width="1200" height="700" fill="url(#icsGrid)" rx="12"/>
+  <rect width="1200" height="700" fill="url(#hazardPattern)" rx="12" opacity="0.3"/>
+  <rect x="1" y="1" width="1198" height="698" fill="none" stroke="#2d4a6f" stroke-width="2" rx="12"/>
+
+  <!-- Title Bar -->
+  <rect x="0" y="0" width="1200" height="50" fill="#0a1628" rx="12" ry="12"/>
+  <rect x="0" y="28" width="1200" height="22" fill="#0a1628"/>
+  <line x1="0" y1="50" x2="1200" y2="50" stroke="#2d4a6f" stroke-width="1.5"/>
+  <circle cx="24" cy="25" r="7" fill="#ef4444"/>
+  <circle cx="46" cy="25" r="7" fill="#f59e0b"/>
+  <circle cx="68" cy="25" r="7" fill="#10b981"/>
+  <!-- Warning icon -->
+  <polygon points="92,15 98,30 86,30" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="92" y="27" font-family="'Courier New', monospace" font-size="8" fill="#f59e0b" text-anchor="middle">!</text>
+  <text x="600" y="32" font-family="'Courier New', monospace" font-size="15" fill="#f59e0b" text-anchor="middle" font-weight="bold">⚠ SCADA/ICS Security Architecture — Industrial Control Systems Defense-in-Depth</text>
+
+  <!-- ===== LAYER 1: Field Devices (Bottom Left) ===== -->
+  <g filter="url(#icsShadow)">
+    <rect x="20" y="70" width="320" height="210" rx="10" fill="#0a1628" stroke="#3d6b8f" stroke-width="1.5" stroke-dasharray="5,3"/>
+    <rect x="20" y="70" width="320" height="26" rx="10" ry="10" fill="url(#fieldGrad)"/>
+    <rect x="20" y="86" width="320" height="10" fill="url(#fieldGrad)"/>
+    <text x="180" y="88" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">🏭 FIELD DEVICES — Level 0</text>
+
+    <!-- Sensors -->
+    <rect x="35" y="108" width="90" height="55" rx="6" fill="#1b3252" stroke="#3d6b8f" stroke-width="1"/>
+    <text x="80" y="124" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle">Temperature</text>
+    <text x="80" y="138" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle">Sensors</text>
+    <text x="80" y="155" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">4-20mA / HART</text>
+
+    <!-- Actuators -->
+    <rect x="135" y="108" width="90" height="55" rx="6" fill="#1b3252" stroke="#3d6b8f" stroke-width="1"/>
+    <text x="180" y="124" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle">Valves &amp;</text>
+    <text x="180" y="138" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle">Actuators</text>
+    <text x="180" y="155" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Control Signals</text>
+
+    <!-- Motors -->
+    <rect x="235" y="108" width="90" height="55" rx="6" fill="#1b3252" stroke="#3d6b8f" stroke-width="1"/>
+    <text x="280" y="124" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle">VFD Motors</text>
+    <text x="280" y="138" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle">&amp; Drives</text>
+    <text x="280" y="155" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Modbus RTU</text>
+
+    <!-- Protocol labels -->
+    <rect x="35" y="172" width="70" height="20" rx="4" fill="#21262d" stroke="#f59e0b" stroke-width="1"/>
+    <text x="70" y="186" font-family="'Courier New', monospace" font-size="8" fill="#f59e0b" text-anchor="middle">Modbus</text>
+    <rect x="112" y="172" width="70" height="20" rx="4" fill="#21262d" stroke="#f59e0b" stroke-width="1"/>
+    <text x="147" y="186" font-family="'Courier New', monospace" font-size="8" fill="#f59e0b" text-anchor="middle">OPC-UA</text>
+    <rect x="189" y="172" width="70" height="20" rx="4" fill="#21262d" stroke="#f59e0b" stroke-width="1"/>
+    <text x="224" y="186" font-family="'Courier New', monospace" font-size="8" fill="#f59e0b" text-anchor="middle">DNP3</text>
+    <rect x="266" y="172" width="60" height="20" rx="4" fill="#21262d" stroke="#f59e0b" stroke-width="1"/>
+    <text x="296" y="186" font-family="'Courier New', monospace" font-size="8" fill="#f59e0b" text-anchor="middle">PROFIBUS</text>
+
+    <!-- Attack vectors -->
+    <text x="35" y="210" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#ef4444">⚠ Attack Vectors:</text>
+    <text x="35" y="225" font-family="'Courier New', monospace" font-size="7" fill="#f87171">• Protocol manipulation</text>
+    <text x="140" y="225" font-family="'Courier New', monospace" font-size="7" fill="#f87171">• Signal injection</text>
+    <text x="245" y="225" font-family="'Courier New', monospace" font-size="7" fill="#f87171">• MITM attacks</text>
+    <text x="35" y="240" font-family="'Courier New', monospace" font-size="7" fill="#f87171">• Firmware tampering</text>
+    <text x="140" y="240" font-family="'Courier New', monospace" font-size="7" fill="#f87171">• Physical access</text>
+    <text x="245" y="240" font-family="'Courier New', monospace" font-size="7" fill="#f87171">• Supply chain</text>
+
+    <!-- Defense mechanisms -->
+    <text x="35" y="260" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#10b981">🛡 Defenses:</text>
+    <text x="100" y="260" font-family="'Courier New', monospace" font-size="7" fill="#34d399">Tamper-proof enclosures</text>
+    <text x="35" y="272" font-family="'Courier New', monospace" font-size="7" fill="#34d399">Signed firmware • Hardware modules • Physical access control</text>
+  </g>
+
+  <!-- ===== LAYER 2: PLCs/RTUs ===== -->
+  <g filter="url(#icsShadow)">
+    <rect x="20" y="295" width="320" height="185" rx="10" fill="#0a1628" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect x="20" y="295" width="320" height="26" rx="10" ry="10" fill="url(#scadaGrad)"/>
+    <rect x="20" y="311" width="320" height="10" fill="url(#scadaGrad)"/>
+    <text x="180" y="313" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">⚙️ PLCs / RTUs — Level 1</text>
+
+    <!-- PLC 1 -->
+    <rect x="35" y="330" width="90" height="60" rx="6" fill="#1b3252" stroke="#f59e0b" stroke-width="1"/>
+    <text x="80" y="348" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f59e0b" text-anchor="middle">Siemens S7</text>
+    <text x="80" y="362" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f59e0b" text-anchor="middle">PLC-1500</text>
+    <rect x="50" y="370" width="60" height="12" rx="3" fill="#238636"/>
+    <text x="80" y="379" font-family="'Courier New', monospace" font-size="7" fill="#ffffff" text-anchor="middle">RUNNING</text>
+
+    <!-- PLC 2 -->
+    <rect x="135" y="330" width="90" height="60" rx="6" fill="#1b3252" stroke="#f59e0b" stroke-width="1"/>
+    <text x="180" y="348" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f59e0b" text-anchor="middle">Allen-Bradley</text>
+    <text x="180" y="362" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f59e0b" text-anchor="middle">ControlLogix</text>
+    <rect x="150" y="370" width="60" height="12" rx="3" fill="#238636"/>
+    <text x="180" y="379" font-family="'Courier New', monospace" font-size="7" fill="#ffffff" text-anchor="middle">RUNNING</text>
+
+    <!-- RTU -->
+    <rect x="235" y="330" width="90" height="60" rx="6" fill="#1b3252" stroke="#f59e0b" stroke-width="1"/>
+    <text x="280" y="348" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f59e0b" text-anchor="middle">Schneider</text>
+    <text x="280" y="362" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f59e0b" text-anchor="middle">Modicon M340</text>
+    <rect x="250" y="370" width="60" height="12" rx="3" fill="#d97706"/>
+    <text x="280" y="379" font-family="'Courier New', monospace" font-size="7" fill="#ffffff" text-anchor="middle">MONITOR</text>
+
+    <!-- Security Controls -->
+    <text x="35" y="408" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#10b981">🛡 Security Controls:</text>
+    <rect x="35" y="415" width="90" height="22" rx="4" fill="#1b3252" stroke="#10b981" stroke-width="1"/>
+    <text x="80" y="428" font-family="'Courier New', monospace" font-size="7" fill="#34d399" text-anchor="middle">Logic Signing</text>
+    <rect x="132" y="415" width="90" height="22" rx="4" fill="#1b3252" stroke="#10b981" stroke-width="1"/>
+    <text x="177" y="428" font-family="'Courier New', monospace" font-size="7" fill="#34d399" text-anchor="middle">Auth Control</text>
+    <rect x="229" y="415" width="95" height="22" rx="4" fill="#1b3252" stroke="#10b981" stroke-width="1"/>
+    <text x="276" y="428" font-family="'Courier New', monospace" font-size="7" fill="#34d399" text-anchor="middle">Firmware Verify</text>
+
+    <text x="35" y="455" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#ef4444">⚠ Risks:</text>
+    <text x="75" y="455" font-family="'Courier New', monospace" font-size="7" fill="#f87171">Unauthorized ladder logic changes • DoS via malformed packets</text>
+    <text x="35" y="468" font-family="'Courier New', monospace" font-size="7" fill="#f87171">Buffer overflow exploits • Legacy protocol vulnerabilities</text>
+  </g>
+
+  <!-- ===== Connection Arrow Field → PLC ===== -->
+  <line x1="180" y1="280" x2="180" y2="293" stroke="#f59e0b" stroke-width="2" marker-end="url(#icsArrow)"/>
+  <text x="195" y="290" font-family="'Courier New', monospace" font-size="7" fill="#f59e0b">Modbus TCP</text>
+
+  <!-- ===== LAYER 3: SCADA Servers & HMI (Center) ===== -->
+  <g filter="url(#icsShadow)">
+    <rect x="355" y="70" width="480" height="410" rx="10" fill="#0a1628" stroke="#e8720c" stroke-width="2"/>
+    <rect x="355" y="70" width="480" height="30" rx="10" ry="10" fill="url(#scadaGrad)"/>
+    <rect x="355" y="90" width="480" height="10" fill="url(#scadaGrad)"/>
+    <text x="595" y="90" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">🖥️ SCADA SYSTEM — Level 2-3</text>
+
+    <!-- SCADA Server -->
+    <rect x="375" y="110" width="200" height="85" rx="8" fill="#1b3252" stroke="#e8720c" stroke-width="1.5"/>
+    <rect x="375" y="110" width="200" height="22" rx="8" ry="8" fill="#e8720c"/>
+    <rect x="375" y="124" width="200" height="8" fill="#e8720c"/>
+    <text x="475" y="126" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">SCADA Server</text>
+    <text x="388" y="148" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">OS: Windows Server 2022</text>
+    <text x="388" y="162" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">App: Ignition v8.1</text>
+    <text x="388" y="176" font-family="'Courier New', monospace" font-size="8" fill="#10b981">Status: ● Operational</text>
+    <text x="388" y="190" font-family="'Courier New', monospace" font-size="8" fill="#f59e0b">Tags: 14,500 active</text>
+
+    <!-- HMI -->
+    <rect x="585" y="110" width="230" height="85" rx="8" fill="#1b3252" stroke="#e8720c" stroke-width="1.5"/>
+    <rect x="585" y="110" width="230" height="22" rx="8" ry="8" fill="#e8720c"/>
+    <rect x="585" y="124" width="230" height="8" fill="#e8720c"/>
+    <text x="700" y="126" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">HMI (Human Machine Interface)</text>
+    <text x="598" y="148" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">Panel: Wonderware InTouch</text>
+    <text x="598" y="162" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">Displays: 6 operator screens</text>
+    <text x="598" y="176" font-family="'Courier New', monospace" font-size="8" fill="#10b981">Alarms: 23 active / 0 critical</text>
+    <text x="598" y="190" font-family="'Courier New', monospace" font-size="8" fill="#f59e0b">Trends: Real-time monitoring</text>
+
+    <!-- Historian -->
+    <rect x="375" y="205" width="200" height="70" rx="8" fill="#1b3252" stroke="#e8720c" stroke-width="1.5"/>
+    <rect x="375" y="205" width="200" height="22" rx="8" ry="8" fill="#d97706"/>
+    <rect x="375" y="219" width="200" height="8" fill="#d97706"/>
+    <text x="475" y="221" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">📊 Historian Server</text>
+    <text x="388" y="244" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">DB: OSIsoft PI System</text>
+    <text x="388" y="258" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">Retention: 10 years</text>
+    <text x="388" y="272" font-family="'Courier New', monospace" font-size="8" fill="#60a5fa">Data points: 2.4M</text>
+
+    <!-- Engineering Workstation -->
+    <rect x="585" y="205" width="230" height="70" rx="8" fill="#1b3252" stroke="#e8720c" stroke-width="1.5"/>
+    <rect x="585" y="205" width="230" height="22" rx="8" ry="8" fill="#d97706"/>
+    <rect x="585" y="219" width="230" height="8" fill="#d97706"/>
+    <text x="700" y="221" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">🔧 Engineering Workstation</text>
+    <text x="598" y="244" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">TIA Portal v18</text>
+    <text x="598" y="258" font-family="'Courier New', monospace" font-size="8" fill="#ef4444">⚠ EWS — High-value target</text>
+    <text x="598" y="272" font-family="'Courier New', monospace" font-size="8" fill="#10b981">MFA: ✓ Enforced</text>
+
+    <!-- IDS/IPS for SCADA -->
+    <rect x="375" y="285" width="440" height="50" rx="8" fill="#0a1628" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="595" y="302" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#ef4444" text-anchor="middle" font-weight="bold">🚨 Network Intrusion Detection — SCADA Zone</text>
+    <rect x="390" y="310" width="100" height="18" rx="4" fill="#1b3252" stroke="#ef4444" stroke-width="1"/>
+    <text x="440" y="323" font-family="'Courier New', monospace" font-size="7" fill="#ef4444" text-anchor="middle">Suricata IDS</text>
+    <rect x="498" y="310" width="100" height="18" rx="4" fill="#1b3252" stroke="#ef4444" stroke-width="1"/>
+    <text x="548" y="323" font-family="'Courier New', monospace" font-size="7" fill="#ef4444" text-anchor="middle">Snort 3.0</text>
+    <rect x="606" y="310" width="100" height="18" rx="4" fill="#1b3252" stroke="#ef4444" stroke-width="1"/>
+    <text x="656" y="323" font-family="'Courier New', monospace" font-size="7" fill="#ef4444" text-anchor="middle">Claroty</text>
+    <rect x="714" y="310" width="90" height="18" rx="4" fill="#1b3252" stroke="#ef4444" stroke-width="1"/>
+    <text x="759" y="323" font-family="'Courier New', monospace" font-size="7" fill="#ef4444" text-anchor="middle">Nozomi</text>
+
+    <!-- OT Firewall -->
+    <rect x="375" y="345" width="440" height="55" rx="8" fill="#0a1628" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="595" y="362" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#f59e0b" text-anchor="middle" font-weight="bold">🔥 OT Network Firewall — Zone Segmentation</text>
+    <text x="390" y="380" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">Rule: ALLOW Modbus-TCP:502 FROM PLC-subnet TO SCADA-subnet</text>
+    <text x="390" y="393" font-family="'Courier New', monospace" font-size="8" fill="#ef4444">DENY ANY FROM Enterprise TO Field-Devices</text>
+
+    <!-- Wireshark Monitoring -->
+    <rect x="375" y="408" width="440" height="55" rx="8" fill="#0a1628" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="595" y="425" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#60a5fa" text-anchor="middle" font-weight="bold">📡 Protocol Analysis &amp; Deep Packet Inspection</text>
+    <text x="390" y="443" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">Wireshark: Capturing on eth0 — 14,523 packets/sec</text>
+    <text x="390" y="456" font-family="'Courier New', monospace" font-size="8" fill="#10b981">Protocol distribution: Modbus 45% | OPC-UA 30% | DNP3 15% | Other 10%</text>
+
+    <!-- Connection Arrow PLC → SCADA -->
+  </g>
+
+  <!-- Connection Arrow PLC → SCADA -->
+  <line x1="340" y1="360" x2="353" y2="360" stroke="#f59e0b" stroke-width="2" marker-end="url(#icsArrow)"/>
+  <text x="330" y="353" font-family="'Courier New', monospace" font-size="7" fill="#f59e0b" text-anchor="end">TCP</text>
+
+  <!-- ===== LAYER 4: DMZ ===== -->
+  <g filter="url(#icsShadow)">
+    <rect x="355" y="495" width="480" height="110" rx="10" fill="#0a1628" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="8,4"/>
+    <rect x="355" y="495" width="480" height="26" rx="10" ry="10" fill="url(#dmzGrad)"/>
+    <rect x="355" y="511" width="480" height="10" fill="url(#dmzGrad)"/>
+    <text x="595" y="513" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">🔒 INDUSTRIAL DMZ — Purdue Model Layer 3.5</text>
+
+    <!-- DMZ Components -->
+    <rect x="370" y="528" width="140" height="65" rx="6" fill="#1b3252" stroke="#8b5cf6" stroke-width="1"/>
+    <text x="440" y="545" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#a78bfa" text-anchor="middle">Jump Server</text>
+    <text x="440" y="558" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Bastion Host</text>
+    <text x="440" y="570" font-family="'Courier New', monospace" font-size="7" fill="#10b981" text-anchor="middle">MFA + SSH Keys</text>
+    <text x="440" y="582" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Session Recording</text>
+
+    <rect x="520" y="528" width="140" height="65" rx="6" fill="#1b3252" stroke="#8b5cf6" stroke-width="1"/>
+    <text x="590" y="545" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#a78bfa" text-anchor="middle">Proxy / Gateway</text>
+    <text x="590" y="558" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Data Diode</text>
+    <text x="590" y="570" font-family="'Courier New', monospace" font-size="7" fill="#10b981" text-anchor="middle">Unidirectional Flow</text>
+    <text x="590" y="582" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">OWASP CORS</text>
+
+    <rect x="670" y="528" width="150" height="65" rx="6" fill="#1b3252" stroke="#8b5cf6" stroke-width="1"/>
+    <text x="745" y="545" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#a78bfa" text-anchor="middle">Patch Management</text>
+    <text x="745" y="558" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Update Server</text>
+    <text x="745" y="570" font-family="'Courier New', monospace" font-size="7" fill="#10b981" text-anchor="middle">Air-gapped Updates</text>
+    <text x="745" y="582" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">WSUS Offline</text>
+  </g>
+
+  <!-- Connection Arrow SCADA → DMZ -->
+  <line x1="595" y1="480" x2="595" y2="493" stroke="#8b5cf6" stroke-width="2" marker-end="url(#icsArrow)"/>
+  <text x="610" y="490" font-family="'Courier New', monospace" font-size="7" fill="#8b5cf6">Data Diode</text>
+
+  <!-- ===== LAYER 5: Enterprise Network (Right Side) ===== -->
+  <g filter="url(#icsShadow)">
+    <rect x="850" y="70" width="330" height="410" rx="10" fill="#0a1628" stroke="#2563eb" stroke-width="2"/>
+    <rect x="850" y="70" width="330" height="28" rx="10" ry="10" fill="url(#entGrad)"/>
+    <rect x="850" y="88" width="330" height="10" fill="url(#entGrad)"/>
+    <text x="1015" y="89" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">🏢 ENTERPRISE NETWORK — Level 4-5</text>
+
+    <!-- Business Systems -->
+    <rect x="865" y="108" width="145" height="55" rx="6" fill="#1b3252" stroke="#2563eb" stroke-width="1"/>
+    <text x="937" y="125" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle">ERP System</text>
+    <text x="937" y="140" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">SAP S/4HANA</text>
+    <text x="937" y="155" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Production Planning</text>
+
+    <rect x="1020" y="108" width="145" height="55" rx="6" fill="#1b3252" stroke="#2563eb" stroke-width="1"/>
+    <text x="1092" y="125" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle">MES System</text>
+    <text x="1092" y="140" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Manufacturing Exec</text>
+    <text x="1092" y="155" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Order Management</text>
+
+    <!-- SIEM -->
+    <rect x="865" y="173" width="300" height="55" rx="6" fill="#1b3252" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="1015" y="190" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#ef4444" text-anchor="middle" font-weight="bold">🚨 SIEM — Security Information &amp; Event Management</text>
+    <text x="878" y="207" font-family="'Courier New', monospace" font-size="7" fill="#8b949e">Splunk Enterprise | Elastic SIEM | IBM QRadar</text>
+    <text x="878" y="220" font-family="'Courier New', monospace" font-size="7" fill="#10b981">Log ingestion: 45,000 EPS | Correlation rules: 2,500+ active</text>
+
+    <!-- Corporate Firewall -->
+    <rect x="865" y="238" width="300" height="45" rx="6" fill="#1b3252" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="1015" y="255" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f59e0b" text-anchor="middle" font-weight="bold">🔥 Enterprise Firewall</text>
+    <text x="878" y="272" font-family="'Courier New', monospace" font-size="7" fill="#8b949e">Palo Alto PA-5260 | Next-Gen FW | IPS/IDS | URL Filtering | SSL Decryption</text>
+
+    <!-- Active Directory -->
+    <rect x="865" y="293" width="145" height="45" rx="6" fill="#1b3252" stroke="#2563eb" stroke-width="1"/>
+    <text x="937" y="310" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle">Active Directory</text>
+    <text x="937" y="325" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">LDAP + Kerberos</text>
+    <text x="937" y="335" font-family="'Courier New', monospace" font-size="7" fill="#10b981" text-anchor="middle">MFA ✓</text>
+
+    <!-- Remote Access -->
+    <rect x="1020" y="293" width="145" height="45" rx="6" fill="#1b3252" stroke="#ef4444" stroke-width="1"/>
+    <text x="1092" y="310" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#f87171" text-anchor="middle">⚠ Remote Access</text>
+    <text x="1092" y="325" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">VPN + Zero Trust</text>
+    <text x="1092" y="335" font-family="'Courier New', monospace" font-size="7" fill="#10b981" text-anchor="middle">Zscaler ✓</text>
+
+    <!-- SOC -->
+    <rect x="865" y="348" width="300" height="55" rx="6" fill="#1b3252" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="1015" y="365" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#ef4444" text-anchor="middle" font-weight="bold">🛡️ Security Operations Center (SOC)</text>
+    <text x="878" y="382" font-family="'Courier New', monospace" font-size="7" fill="#8b949e">24/7 Monitoring | Tier 1-3 Analysts | Threat Hunting</text>
+    <text x="878" y="395" font-family="'Courier New', monospace" font-size="7" fill="#10b981">SOAR: Splunk SOAR | Playbooks: 85+ automated response actions</text>
+
+    <!-- Compliance -->
+    <rect x="865" y="413" width="145" height="55" rx="6" fill="#1b3252" stroke="#10b981" stroke-width="1"/>
+    <text x="937" y="430" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#10b981" text-anchor="middle">Compliance</text>
+    <text x="937" y="444" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">IEC 62443</text>
+    <text x="937" y="455" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">NERC CIP</text>
+    <text x="937" y="466" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">ISO 27001</text>
+
+    <rect x="1020" y="413" width="145" height="55" rx="6" fill="#1b3252" stroke="#10b981" stroke-width="1"/>
+    <text x="1092" y="430" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#10b981" text-anchor="middle">Vulnerability Mgmt</text>
+    <text x="1092" y="444" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Tenable OT</text>
+    <text x="1092" y="455" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">Rapid7 InsightVM</text>
+    <text x="1092" y="466" font-family="'Courier New', monospace" font-size="7" fill="#8b949e" text-anchor="middle">OT Asset Discovery</text>
+  </g>
+
+  <!-- Connection Arrow SCADA → Enterprise -->
+  <line x1="835" y1="275" x2="848" y2="275" stroke="#2563eb" stroke-width="2" marker-end="url(#icsArrowBlue)"/>
+
+  <!-- ===== Bottom: Threat Landscape ===== -->
+  <g filter="url(#icsShadow)">
+    <rect x="20" y="495" width="320" height="190" rx="10" fill="#0a1628" stroke="#ef4444" stroke-width="1.5"/>
+    <rect x="20" y="495" width="320" height="26" rx="10" ry="10" fill="url(#alertRed)"/>
+    <rect x="20" y="511" width="320" height="10" fill="url(#alertRed)"/>
+    <text x="180" y="513" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">🎯 OT Threat Landscape</text>
+
+    <!-- Known threats -->
+    <rect x="35" y="530" width="140" height="50" rx="5" fill="#1b3252" stroke="#ef4444" stroke-width="1"/>
+    <text x="105" y="547" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#ef4444" text-anchor="middle">Malware Threats</text>
+    <text x="105" y="559" font-family="'Courier New', monospace" font-size="7" fill="#f87171" text-anchor="middle">Stuxnet | Triton | Industroyer</text>
+    <text x="105" y="572" font-family="'Courier New', monospace" font-size="7" fill="#f87171" text-anchor="middle">BlackEnergy | CrashOverride</text>
+
+    <rect x="185" y="530" width="140" height="50" rx="5" fill="#1b3252" stroke="#f59e0b" stroke-width="1"/>
+    <text x="255" y="547" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#f59e0b" text-anchor="middle">Attack Techniques</text>
+    <text x="255" y="559" font-family="'Courier New', monospace" font-size="7" fill="#fbbf24" text-anchor="middle">Spear Phishing | Watering Hole</text>
+    <text x="255" y="572" font-family="'Courier New', monospace" font-size="7" fill="#fbbf24" text-anchor="middle">Supply Chain | Zero-Day</text>
+
+    <!-- MITRE ATT&amp;CK for ICS -->
+    <text x="35" y="600" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#ef4444" font-weight="bold">MITRE ATT&amp;CK for ICS:</text>
+    <rect x="35" y="608" width="60" height="16" rx="3" fill="#21262d"/>
+    <text x="65" y="619" font-family="'Courier New', monospace" font-size="7" fill="#ef4444" text-anchor="middle">Inhibit</text>
+    <rect x="100" y="608" width="60" height="16" rx="3" fill="#21262d"/>
+    <text x="130" y="619" font-family="'Courier New', monospace" font-size="7" fill="#ef4444" text-anchor="middle">Manipulate</text>
+    <rect x="165" y="608" width="60" height="16" rx="3" fill="#21262d"/>
+    <text x="195" y="619" font-family="'Courier New', monospace" font-size="7" fill="#ef4444" text-anchor="middle">Impair</text>
+    <rect x="230" y="608" width="100" height="16" rx="3" fill="#21262d"/>
+    <text x="280" y="619" font-family="'Courier New', monospace" font-size="7" fill="#ef4444" text-anchor="middle">Unauthorized Cmd</text>
+
+    <!-- Defense recommendations -->
+    <text x="35" y="645" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#10b981">✓ Network segmentation | ✓ Endpoint protection | ✓ Monitoring</text>
+    <text x="35" y="660" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#10b981">✓ Incident response plan | ✓ Backup &amp; recovery | ✓ Training</text>
+    <text x="35" y="675" font-family="'Segoe UI', Arial, sans-serif" font-size="8" fill="#10b981">✓ Supply chain security | ✓ Vendor risk assessment | ✓ Pen testing</text>
+  </g>
+
+  <!-- ===== Bottom Right: Purdue Model Reference ===== -->
+  <g filter="url(#icsShadow)">
+    <rect x="850" y="495" width="330" height="190" rx="10" fill="#0a1628" stroke="#60a5fa" stroke-width="1.5"/>
+    <rect x="850" y="495" width="330" height="26" rx="10" ry="10" fill="url(#entGrad)"/>
+    <rect x="850" y="511" width="330" height="10" fill="url(#entGrad)"/>
+    <text x="1015" y="513" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">📐 Purdue Enterprise Reference Architecture</text>
+
+    <!-- Purdue layers -->
+    <rect x="865" y="530" width="300" height="20" rx="4" fill="#3d6b8f" opacity="0.6"/>
+    <text x="1015" y="544" font-family="'Courier New', monospace" font-size="8" fill="#ffffff" text-anchor="middle">Level 5: Enterprise Internet</text>
+
+    <rect x="865" y="554" width="300" height="20" rx="4" fill="#2563eb" opacity="0.6"/>
+    <text x="1015" y="568" font-family="'Courier New', monospace" font-size="8" fill="#ffffff" text-anchor="middle">Level 4: Business Planning &amp; Logistics</text>
+
+    <rect x="865" y="578" width="300" height="20" rx="4" fill="#8b5cf6" opacity="0.6"/>
+    <text x="1015" y="592" font-family="'Courier New', monospace" font-size="8" fill="#ffffff" text-anchor="middle">Level 3.5: Industrial DMZ</text>
+
+    <rect x="865" y="602" width="300" height="20" rx="4" fill="#e8720c" opacity="0.6"/>
+    <text x="1015" y="616" font-family="'Courier New', monospace" font-size="8" fill="#ffffff" text-anchor="middle">Level 3: Manufacturing Operations</text>
+
+    <rect x="865" y="626" width="300" height="20" rx="4" fill="#f59e0b" opacity="0.6"/>
+    <text x="1015" y="640" font-family="'Courier New', monospace" font-size="8" fill="#ffffff" text-anchor="middle">Level 2: Supervisory Control</text>
+
+    <rect x="865" y="650" width="300" height="20" rx="4" fill="#3d6b8f" opacity="0.6"/>
+    <text x="1015" y="664" font-family="'Courier New', monospace" font-size="8" fill="#ffffff" text-anchor="middle">Level 1: Basic Control (PLCs/RTUs)</text>
+
+    <!-- Security boundary lines -->
+    <line x1="862" y1="553" x2="865" y2="553" stroke="#ef4444" stroke-width="2" stroke-dasharray="3,2"/>
+    <line x1="862" y1="577" x2="865" y2="577" stroke="#ef4444" stroke-width="2" stroke-dasharray="3,2"/>
+    <line x1="862" y1="601" x2="865" y2="601" stroke="#ef4444" stroke-width="2" stroke-dasharray="3,2"/>
+  </g>
+
+  <!-- DMZ Connection Arrow to Enterprise -->
+  <line x1="835" y1="548" x2="848" y2="548" stroke="#8b5cf6" stroke-width="2" marker-end="url(#icsArrow)"/>
+  <text x="828" y="542" font-family="'Courier New', monospace" font-size="6" fill="#8b5cf6" text-anchor="end">DMZ</text>
+</svg>
